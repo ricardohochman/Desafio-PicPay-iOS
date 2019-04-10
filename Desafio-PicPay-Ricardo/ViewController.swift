@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let viewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("hey")
+        
+        viewModel.getUsers { users, err in
+            users?.forEach { print($0.name ?? "") }
+        }
     }
 }
