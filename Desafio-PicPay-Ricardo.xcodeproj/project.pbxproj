@@ -19,6 +19,8 @@
 		FA1613D5225ED7BE00F0B055 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D4225ED7BE00F0B055 /* AppColors.swift */; };
 		FA1613D7225EDAC400F0B055 /* NewCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D6225EDAC400F0B055 /* NewCreditCardViewController.swift */; };
 		FA1613D9225EDCBE00F0B055 /* RHFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D8225EDCBE00F0B055 /* RHFloatingTextField.swift */; };
+		FA1613DB225EE70700F0B055 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613DA225EE70700F0B055 /* UITextField+Extensions.swift */; };
+		FA1613DD225EE74100F0B055 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613DC225EE74100F0B055 /* String+Extensions.swift */; };
 		FA49FEC1225EAAF800693C08 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC0225EAAF800693C08 /* R.generated.swift */; };
 		FA49FEC4225EAB9900693C08 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC3225EAB9900693C08 /* RequestManager.swift */; };
 		FA49FECD225EAC4A00693C08 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */; };
@@ -65,6 +67,8 @@
 		FA1613D4225ED7BE00F0B055 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		FA1613D6225EDAC400F0B055 /* NewCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCreditCardViewController.swift; sourceTree = "<group>"; };
 		FA1613D8225EDCBE00F0B055 /* RHFloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHFloatingTextField.swift; sourceTree = "<group>"; };
+		FA1613DA225EE70700F0B055 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		FA1613DC225EE74100F0B055 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FA49FEC0225EAAF800693C08 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FA49FEC3225EAB9900693C08 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				FA49FECB225EAC0B00693C08 /* Dictionary+Extensions.swift */,
 				FA1613D4225ED7BE00F0B055 /* AppColors.swift */,
 				FA1613D8225EDCBE00F0B055 /* RHFloatingTextField.swift */,
+				FA1613DA225EE70700F0B055 /* UITextField+Extensions.swift */,
+				FA1613DC225EE74100F0B055 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 				FA934E2E225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodeld in Sources */,
 				FA1613D5225ED7BE00F0B055 /* AppColors.swift in Sources */,
 				FA49FECE225EAC4A00693C08 /* UIViewController+Extensions.swift in Sources */,
+				FA1613DB225EE70700F0B055 /* UITextField+Extensions.swift in Sources */,
 				FA49FED0225EAC4A00693C08 /* CustomActivityIndicator.swift in Sources */,
 				FA49FED1225EAC4A00693C08 /* JSONDecoder+Extensions.swift in Sources */,
 				FA1613C5225EB8A100F0B055 /* HomeTableViewController.swift in Sources */,
@@ -494,6 +501,7 @@
 				FA1613D7225EDAC400F0B055 /* NewCreditCardViewController.swift in Sources */,
 				FA934E26225EA51200E3B202 /* AppDelegate.swift in Sources */,
 				FA1613CC225EC12700F0B055 /* SearchHeaderTableViewCell.swift in Sources */,
+				FA1613DD225EE74100F0B055 /* String+Extensions.swift in Sources */,
 				FA49FEC1225EAAF800693C08 /* R.generated.swift in Sources */,
 				FA49FED2225EAC4A00693C08 /* Dictionary+Extensions.swift in Sources */,
 				FA49FED4225EADEC00693C08 /* MainAPI.swift in Sources */,

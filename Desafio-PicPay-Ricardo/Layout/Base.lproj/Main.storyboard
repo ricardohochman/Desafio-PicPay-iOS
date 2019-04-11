@@ -179,6 +179,9 @@
                                                             <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="editingChanged:" destination="HO6-or-GAc" eventType="editingChanged" id="1CZ-i7-j8e"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -212,6 +215,9 @@
                                                             <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="editingChanged:" destination="HO6-or-GAc" eventType="editingChanged" id="Vys-6I-HOm"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -248,6 +254,9 @@
                                                                     <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="editingChanged:" destination="HO6-or-GAc" eventType="editingChanged" id="Aht-Md-G5K"/>
+                                                            </connections>
                                                         </textField>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O5l-Mb-1u5" customClass="RHFloatingTextField" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target">
                                                             <rect key="frame" x="173.5" y="0.0" width="161.5" height="30"/>
@@ -265,6 +274,9 @@
                                                                     <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="editingChanged:" destination="HO6-or-GAc" eventType="editingChanged" id="RFq-Pv-cI6"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -288,6 +300,12 @@
                             <outlet property="delegate" destination="HO6-or-GAc" id="JO6-Io-SZt"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="cvvTextField" destination="O5l-Mb-1u5" id="rxv-la-X3T"/>
+                        <outlet property="expireTextField" destination="D8v-qz-mNx" id="kVW-OA-Wot"/>
+                        <outlet property="nameTextField" destination="pdI-08-gDC" id="8eG-CN-Wxu"/>
+                        <outlet property="numberTextField" destination="LGa-ff-RYb" id="iAO-2f-fYm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssq-l0-zoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -82,7 +82,7 @@ class RHFloatingTextField: UITextField {
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {() -> Void in
                 if (self.text == nil) || (self.text?.count)! <= 0 {
                     self.lblPlaceHolder.font = self.defaultFont
-                    self.lblPlaceHolder.frame = CGRect(x: self.lblPlaceHolder.frame.origin.x + 10, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+                    self.lblPlaceHolder.frame = CGRect(x: self.lblPlaceHolder.frame.origin.x, y: 0, width: self.frame.size.width, height: self.frame.size.height)
                 } else {
                     self.lblPlaceHolder.frame = CGRect(x: self.lblPlaceHolder.frame.origin.x, y: -self.difference, width: self.frame.size.width, height: self.frame.size.height)
                 }
