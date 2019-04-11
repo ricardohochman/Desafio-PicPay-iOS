@@ -127,7 +127,7 @@
             <objects>
                 <tableViewController id="HO6-or-GAc" customClass="NewCreditCardViewController" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fJw-Al-AIu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
@@ -305,23 +305,120 @@
                         <outlet property="expireTextField" destination="D8v-qz-mNx" id="kVW-OA-Wot"/>
                         <outlet property="nameTextField" destination="pdI-08-gDC" id="8eG-CN-Wxu"/>
                         <outlet property="numberTextField" destination="LGa-ff-RYb" id="iAO-2f-fYm"/>
-                        <segue destination="EP2-Dp-sNL" kind="show" id="C2B-WU-GNB"/>
+                        <segue destination="EP2-Dp-sNL" kind="show" identifier="goToConfirmation" id="C2B-WU-GNB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssq-l0-zoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2204" y="-585.1574212893554"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirmation View Controller-->
         <scene sceneID="wHx-om-8p4">
             <objects>
-                <viewController id="EP2-Dp-sNL" sceneMemberID="viewController">
+                <viewController id="EP2-Dp-sNL" customClass="ConfirmationViewController" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bBF-Rz-VhU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L5e-9M-Kjl">
+                                <rect key="frame" x="162.5" y="28" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="FgR-z0-IGA"/>
+                                    <constraint firstAttribute="height" constant="50" id="YRu-Xn-9Sk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXk-eq-UmX">
+                                <rect key="frame" x="20" y="86" width="335" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXF-k9-uFA">
+                                <rect key="frame" x="131" y="136" width="113.5" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="1cM-7A-B6T"/>
+                                </constraints>
+                                <color key="textColor" red="0.066666666666666666" green="0.7803921568627451" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="54"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.5607843137254902" green="0.5725490196078431" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZP-93-m06">
+                                <rect key="frame" x="20" y="241" width="335" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeCreditCard" destination="EP2-Dp-sNL" eventType="touchUpInside" id="DQQ-lo-drd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hP-Pz-Yy7" customClass="RHButton" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target">
+                                <rect key="frame" x="12" y="300" width="351" height="48"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="QC1-pk-bML"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Pagar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goToNewCreditCard" destination="2SV-4z-O2L" eventType="touchUpInside" id="Fzb-HE-Egf"/>
+                                    <action selector="pay" destination="EP2-Dp-sNL" eventType="touchUpInside" id="5Ur-Kt-GgL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dl0-sI-tcd">
+                                <rect key="frame" x="100" y="157.5" width="23" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.5607843137254902" green="0.5725490196078431" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CXF-k9-uFA" firstAttribute="leading" secondItem="Dl0-sI-tcd" secondAttribute="trailing" constant="8" id="3AP-1u-qhk"/>
+                            <constraint firstItem="gXk-eq-UmX" firstAttribute="top" secondItem="L5e-9M-Kjl" secondAttribute="bottom" constant="8" id="6TV-eI-31U"/>
+                            <constraint firstItem="gXk-eq-UmX" firstAttribute="leading" secondItem="FY7-am-kTN" secondAttribute="leading" constant="20" id="DrY-Y5-ifp"/>
+                            <constraint firstItem="7hP-Pz-Yy7" firstAttribute="top" secondItem="iZP-93-m06" secondAttribute="bottom" constant="30" id="ExT-hP-oDP"/>
+                            <constraint firstItem="FY7-am-kTN" firstAttribute="trailing" secondItem="iZP-93-m06" secondAttribute="trailing" constant="20" id="GLG-xB-NP3"/>
+                            <constraint firstItem="Dl0-sI-tcd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FY7-am-kTN" secondAttribute="leading" constant="20" id="KPe-wj-DST"/>
+                            <constraint firstItem="7hP-Pz-Yy7" firstAttribute="leading" secondItem="FY7-am-kTN" secondAttribute="leading" constant="12" id="Ouh-J6-jh7"/>
+                            <constraint firstItem="CXF-k9-uFA" firstAttribute="centerX" secondItem="bBF-Rz-VhU" secondAttribute="centerX" id="RUC-N8-5Vh"/>
+                            <constraint firstItem="L5e-9M-Kjl" firstAttribute="top" secondItem="FY7-am-kTN" secondAttribute="top" constant="8" id="Vdx-fp-LdZ"/>
+                            <constraint firstItem="CXF-k9-uFA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FY7-am-kTN" secondAttribute="leading" constant="20" id="XzG-ti-EKs"/>
+                            <constraint firstItem="FY7-am-kTN" firstAttribute="trailing" secondItem="gXk-eq-UmX" secondAttribute="trailing" constant="20" id="eEH-g9-If4"/>
+                            <constraint firstItem="L5e-9M-Kjl" firstAttribute="centerX" secondItem="bBF-Rz-VhU" secondAttribute="centerX" id="fxl-1d-OkK"/>
+                            <constraint firstItem="iZP-93-m06" firstAttribute="leading" secondItem="FY7-am-kTN" secondAttribute="leading" constant="20" id="ho3-KU-LaR"/>
+                            <constraint firstItem="CXF-k9-uFA" firstAttribute="top" secondItem="gXk-eq-UmX" secondAttribute="bottom" constant="32" id="imj-1d-8oG"/>
+                            <constraint firstItem="iZP-93-m06" firstAttribute="top" secondItem="CXF-k9-uFA" secondAttribute="bottom" constant="40" id="lDd-hW-Ml5"/>
+                            <constraint firstItem="FY7-am-kTN" firstAttribute="trailing" secondItem="7hP-Pz-Yy7" secondAttribute="trailing" constant="12" id="qV9-ph-1Hv"/>
+                            <constraint firstItem="Dl0-sI-tcd" firstAttribute="centerY" secondItem="CXF-k9-uFA" secondAttribute="centerY" id="ve7-Qh-eVq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FY7-am-kTN"/>
                     </view>
+                    <connections>
+                        <outlet property="changeCardButton" destination="iZP-93-m06" id="m3V-Bf-Hzv"/>
+                        <outlet property="payButton" destination="7hP-Pz-Yy7" id="vVh-3R-uEX"/>
+                        <outlet property="priceTextField" destination="CXF-k9-uFA" id="Ggf-r3-1gd"/>
+                        <outlet property="userImageView" destination="L5e-9M-Kjl" id="fK5-OQ-Pfc"/>
+                        <outlet property="usernameLabel" destination="gXk-eq-UmX" id="3V9-zd-kri"/>
+                        <segue destination="HO6-or-GAc" kind="show" identifier="goToEditCreditCard" id="YyR-Fv-T8u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mzs-Eb-A0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -331,4 +428,7 @@
     <resources>
         <image name="ilustration_creditcard" width="150" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="YyR-Fv-T8u"/>
+    </inferredMetricsTieBreakers>
 </document>

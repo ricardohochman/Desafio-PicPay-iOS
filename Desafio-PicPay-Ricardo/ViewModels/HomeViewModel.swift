@@ -12,6 +12,7 @@ class HomeViewModel {
     
     // MARK: - Constants
     private let api: MainAPI
+    let paymentViewModel = PaymentFlowViewModel()
     
     // MARK: - Variables
     private var users = [UserViewModel]()
@@ -66,7 +67,7 @@ class HomeViewModel {
 class UserViewModel {
     
     // MARK: - Constants
-    private let user: User
+    let user: User
     
     // MARK: - Init
     init(user: User) {

@@ -18,11 +18,19 @@ class NewCreditCardViewController: UITableViewController {
     
     // MARK: - Variables
     private var footerView: PayFooterTableViewCell?
+    var paymentFlowViewModel: PaymentFlowViewModel?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         createFooter()
+        setupInfo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationGreenBack()
+        checkFields()
     }
     
     // MARK: - Actions
@@ -45,6 +53,15 @@ class NewCreditCardViewController: UITableViewController {
     private func createFooter() {
         footerView = R.nib.payFooterTableViewCell(owner: nil)
         footerView?.delegate = self
+    }
+    
+    private func setupInfo() {
+        if paymentFlowViewModel?.hasCard ?? false {
+            self.numberTextField.text = paymentFlowViewModel?.card?.number
+            self.nameTextField.text = paymentFlowViewModel?.card?.name
+            self.expireTextField.text = paymentFlowViewModel?.card?.expiracy
+            self.cvvTextField.text = paymentFlowViewModel?.card?.cvv
+        }
     }
     
     private func checkFields() {
@@ -96,6 +113,12 @@ class NewCreditCardViewController: UITableViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let segueVC = R.segue.newCreditCardViewController.goToConfirmation(segue: segue) {
+            segueVC.destination.paymentFlowViewModel = paymentFlowViewModel
+        }
+    }
 }
 
 extension NewCreditCardViewController: PayFooterDelegate {
@@ -113,5 +136,12 @@ extension NewCreditCardViewController: PayFooterDelegate {
         
         let creditCard = CreditCard(number: number, name: name, expiracy: expiracy, cvv: cvv, brand: brand.name)
         
+        if paymentFlowViewModel?.hasCard ?? false {
+            paymentFlowViewModel?.setCreditCard(card: creditCard)
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            paymentFlowViewModel?.setCreditCard(card: creditCard)
+            self.performSegue(withIdentifier: R.segue.newCreditCardViewController.goToConfirmation, sender: nil)
+        }
     }
 }

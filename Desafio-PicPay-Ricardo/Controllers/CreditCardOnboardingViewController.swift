@@ -10,6 +10,8 @@ import UIKit
 
 class CreditCardOnboardingViewController: UIViewController {
 
+    var paymentFlowViewModel: PaymentFlowViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,5 +23,11 @@ class CreditCardOnboardingViewController: UIViewController {
     
     @IBAction func goToNewCreditCard() {
         self.performSegue(withIdentifier: R.segue.creditCardOnboardingViewController.goToNewCreditCard, sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let segueVC = R.segue.creditCardOnboardingViewController.goToNewCreditCard(segue: segue) {
+            segueVC.destination.paymentFlowViewModel = paymentFlowViewModel
+        }
     }
 }

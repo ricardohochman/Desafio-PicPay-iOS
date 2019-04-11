@@ -44,6 +44,7 @@
 		FADE6181225F8AC500BAE7B1 /* CreditCardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE6180225F8AC500BAE7B1 /* CreditCardManager.swift */; };
 		FADE6183225F91FD00BAE7B1 /* PaymentFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE6182225F91FD00BAE7B1 /* PaymentFlowViewModel.swift */; };
 		FADE6185225F93DF00BAE7B1 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE6184225F93DF00BAE7B1 /* PaymentModel.swift */; };
+		FAF1B05E225FE656007D9E53 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B05D225FE656007D9E53 /* ConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		FADE6180225F8AC500BAE7B1 /* CreditCardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardManager.swift; sourceTree = "<group>"; };
 		FADE6182225F91FD00BAE7B1 /* PaymentFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFlowViewModel.swift; sourceTree = "<group>"; };
 		FADE6184225F93DF00BAE7B1 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		FAF1B05D225FE656007D9E53 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				FA1613C4225EB8A100F0B055 /* HomeTableViewController.swift */,
 				FA1613D2225ED60A00F0B055 /* CreditCardOnboardingViewController.swift */,
 				FA1613D6225EDAC400F0B055 /* NewCreditCardViewController.swift */,
+				FAF1B05D225FE656007D9E53 /* ConfirmationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -436,7 +439,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
@@ -453,7 +456,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA48BBEB225EA94A003CE401 /* RSwift */ = {
@@ -503,6 +506,7 @@
 			files = (
 				FA1613D3225ED60A00F0B055 /* CreditCardOnboardingViewController.swift in Sources */,
 				FA1613D9225EDCBE00F0B055 /* RHFloatingTextField.swift in Sources */,
+				FAF1B05E225FE656007D9E53 /* ConfirmationViewController.swift in Sources */,
 				FA49FED7225EB62D00693C08 /* User.swift in Sources */,
 				FA49FECD225EAC4A00693C08 /* UIImageView+Extensions.swift in Sources */,
 				FADE6185225F93DF00BAE7B1 /* PaymentModel.swift in Sources */,

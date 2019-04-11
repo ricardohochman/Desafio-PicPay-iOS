@@ -6,40 +6,42 @@
 //  Copyright © 2019 Ricardo Hochman. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class PaymentFlowViewModel {
     
     // MARK: - Variables
-    var paymentModel = PaymentModel()
+    private var paymentModel = PaymentModel()
     private var user: User?
-    private var card: CreditCard?
+    var card: CreditCard?
     
     // MARK: - Parameters
+    
+    var hasCard: Bool {
+        return card != nil
+    }
     
     var username: String {
         return user?.username ?? ""
     }
     
-    private var cardTitle: String {
+    var image: URL? {
+        return URL(string: user?.img ?? "")
+    }
+    
+    var changeCardButtonTitle: NSMutableAttributedString {
         let brand = card?.brand ?? ""
         let cardNumber = card?.number ?? ""
         let lastFour = String(cardNumber.suffix(4))
-        return "\(brand) \(lastFour) • "
-    }
-    
-    private var editString: String {
-        return "EDITAR"
-    }
-    
-    private var mainString: String {
-        return "\(cardTitle)\(editString)"
-    }
-    
-    var cardAttributedTitle: NSMutableAttributedString {
+        
+        let cardTitle = "\(brand) \(lastFour) • "
+        let editString = "EDITAR"
+        let mainString = "\(cardTitle)\(editString)"
+        
         let range = (mainString as NSString).range(of: editString)
         let attribute = NSMutableAttributedString(string: mainString)
-        attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: AppColors.green, range: range)
+        attribute.addAttribute(.foregroundColor, value: UIColor.white, range: (mainString as NSString).range(of: cardTitle))
+        attribute.addAttribute(.foregroundColor, value: AppColors.green, range: range)
         return attribute
     }
     
