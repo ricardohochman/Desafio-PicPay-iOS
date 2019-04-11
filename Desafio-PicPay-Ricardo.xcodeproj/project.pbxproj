@@ -48,6 +48,7 @@
 		FAF1B062225FED10007D9E53 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B060225FED10007D9E53 /* CoreDataManager.swift */; };
 		FAF1B063225FED10007D9E53 /* MoviePersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B061225FED10007D9E53 /* MoviePersistenceManager.swift */; };
 		FAF1B065225FFBD8007D9E53 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B064225FFBD8007D9E53 /* PaymentResponse.swift */; };
+		FAF1B06722600125007D9E53 /* NotificationCenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B06622600125007D9E53 /* NotificationCenterManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		FAF1B060225FED10007D9E53 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FAF1B061225FED10007D9E53 /* MoviePersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePersistenceManager.swift; sourceTree = "<group>"; };
 		FAF1B064225FFBD8007D9E53 /* PaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
+		FAF1B06622600125007D9E53 /* NotificationCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				FA1613D8225EDCBE00F0B055 /* RHFloatingTextField.swift */,
 				FA1613DA225EE70700F0B055 /* UITextField+Extensions.swift */,
 				FA1613DC225EE74100F0B055 /* String+Extensions.swift */,
+				FAF1B06622600125007D9E53 /* NotificationCenterManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				FAF1B05E225FE656007D9E53 /* ConfirmationViewController.swift in Sources */,
 				FA49FED7225EB62D00693C08 /* User.swift in Sources */,
 				FA49FECD225EAC4A00693C08 /* UIImageView+Extensions.swift in Sources */,
+				FAF1B06722600125007D9E53 /* NotificationCenterManager.swift in Sources */,
 				FADE6185225F93DF00BAE7B1 /* PaymentModel.swift in Sources */,
 				FA49FECF225EAC4A00693C08 /* UIView+Anchors.swift in Sources */,
 				FA49FEC4225EAB9900693C08 /* RequestManager.swift in Sources */,

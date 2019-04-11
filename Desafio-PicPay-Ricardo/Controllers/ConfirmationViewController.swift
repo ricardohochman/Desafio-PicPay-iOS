@@ -31,6 +31,7 @@ class ConfirmationViewController: UIViewController {
     }
     
     @IBAction private func pay() {
+        guard let viewModel = paymentFlowViewModel else { return }
         guard let priceText = priceTextField.text else { return }
         let price = Double(priceText.replacingOccurrences(of: ",", with: ".")) ?? 0.0
         paymentFlowViewModel?.setValue(value: price)
@@ -39,7 +40,8 @@ class ConfirmationViewController: UIViewController {
             guard let self = self else { return }
             self.removeActivityIndicator()
             if success {
-                // TODO: Show success
+                self.navigationController?.popToRootViewController(animated: true)
+                NotificationCenterManager.showPaymentSuccess(viewModel: viewModel)
             } else {
                 self.showAlert(message: "Falha no pagamento", title: "Tente novamente com outro cartão de crédito")
             }

@@ -17,6 +17,11 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         setupTableView()
         loadData()
+        observeNotifications()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +31,16 @@ class HomeTableViewController: UITableViewController {
     
     private func setupTableView() {
         tableView.rowHeight = 80
+    }
+    
+    private func observeNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(showPaymentSuccess), name: .paymentSuccess, object: nil)
+    }
+    
+    @objc private func showPaymentSuccess(_ notification: Notification) {
+        if let viewModel = NotificationCenterManager.retrievePaymentSuccess(notification) {
+            print("Suuucessoooooo", viewModel.response?.transaction.id ?? "")
+        }
     }
     
     // MARK: - API
