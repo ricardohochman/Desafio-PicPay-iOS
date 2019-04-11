@@ -8,12 +8,20 @@
 
 import UIKit
 
+protocol PayFooterDelegate: class {
+    func pay()
+}
+
 class PayFooterTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var saveButton: RHButton!
+    // MARK: - Outlets
+    @IBOutlet private weak var saveButton: RHButton!
     
-    func hideButton() {
-        saveButton.isHidden = true
+    // MARK: - Variables
+    weak var delegate: PayFooterDelegate?
+    
+    // MARK: - Actions
+    @IBAction private func saveAction() {
+        delegate?.pay()
     }
-    
 }

@@ -40,6 +40,10 @@
 		FA934E30225EA51300E3B202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA934E2F225EA51300E3B202 /* Assets.xcassets */; };
 		FA934E33225EA51300E3B202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA934E31225EA51300E3B202 /* LaunchScreen.storyboard */; };
 		FA934E3E225EA51300E3B202 /* Desafio_PicPay_RicardoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA934E3D225EA51300E3B202 /* Desafio_PicPay_RicardoTests.swift */; };
+		FADE617F225F870000BAE7B1 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE617E225F870000BAE7B1 /* CreditCard.swift */; };
+		FADE6181225F8AC500BAE7B1 /* CreditCardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE6180225F8AC500BAE7B1 /* CreditCardManager.swift */; };
+		FADE6183225F91FD00BAE7B1 /* PaymentFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE6182225F91FD00BAE7B1 /* PaymentFlowViewModel.swift */; };
+		FADE6185225F93DF00BAE7B1 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE6184225F93DF00BAE7B1 /* PaymentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +98,10 @@
 		FA934E39225EA51300E3B202 /* Desafio-PicPay-RicardoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desafio-PicPay-RicardoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA934E3D225EA51300E3B202 /* Desafio_PicPay_RicardoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio_PicPay_RicardoTests.swift; sourceTree = "<group>"; };
 		FA934E3F225EA51300E3B202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FADE617E225F870000BAE7B1 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		FADE6180225F8AC500BAE7B1 /* CreditCardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardManager.swift; sourceTree = "<group>"; };
+		FADE6182225F91FD00BAE7B1 /* PaymentFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFlowViewModel.swift; sourceTree = "<group>"; };
+		FADE6184225F93DF00BAE7B1 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 		FA49FEC5225EAC0B00693C08 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FADE6180225F8AC500BAE7B1 /* CreditCardManager.swift */,
 				FA1613D0225ED53500F0B055 /* RHButton.swift */,
 				FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */,
 				FA49FEC7225EAC0B00693C08 /* UIViewController+Extensions.swift */,
@@ -175,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				FA49FED6225EB62D00693C08 /* User.swift */,
+				FADE617E225F870000BAE7B1 /* CreditCard.swift */,
+				FADE6184225F93DF00BAE7B1 /* PaymentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				FA49FED9225EB65000693C08 /* HomeViewModel.swift */,
+				FADE6182225F91FD00BAE7B1 /* PaymentFlowViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -458,7 +470,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -493,11 +505,14 @@
 				FA1613D9225EDCBE00F0B055 /* RHFloatingTextField.swift in Sources */,
 				FA49FED7225EB62D00693C08 /* User.swift in Sources */,
 				FA49FECD225EAC4A00693C08 /* UIImageView+Extensions.swift in Sources */,
+				FADE6185225F93DF00BAE7B1 /* PaymentModel.swift in Sources */,
 				FA49FECF225EAC4A00693C08 /* UIView+Anchors.swift in Sources */,
 				FA49FEC4225EAB9900693C08 /* RequestManager.swift in Sources */,
+				FADE617F225F870000BAE7B1 /* CreditCard.swift in Sources */,
 				FA1613D1225ED53500F0B055 /* RHButton.swift in Sources */,
 				FA1613C8225EBB5E00F0B055 /* UserTableViewCell.swift in Sources */,
 				FA934E2E225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodeld in Sources */,
+				FADE6183225F91FD00BAE7B1 /* PaymentFlowViewModel.swift in Sources */,
 				FA1613D5225ED7BE00F0B055 /* AppColors.swift in Sources */,
 				FA49FECE225EAC4A00693C08 /* UIViewController+Extensions.swift in Sources */,
 				FA1613E0225EECC400F0B055 /* PayFooterTableViewCell.swift in Sources */,
@@ -512,6 +527,7 @@
 				FA1613DD225EE74100F0B055 /* String+Extensions.swift in Sources */,
 				FA49FEC1225EAAF800693C08 /* R.generated.swift in Sources */,
 				FA49FED2225EAC4A00693C08 /* Dictionary+Extensions.swift in Sources */,
+				FADE6181225F8AC500BAE7B1 /* CreditCardManager.swift in Sources */,
 				FA49FED4225EADEC00693C08 /* MainAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -34,6 +34,9 @@
                                 <real key="value" value="24"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="saveAction" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9eV-eS-Xsh"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
