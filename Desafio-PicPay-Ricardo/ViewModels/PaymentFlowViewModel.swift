@@ -21,6 +21,10 @@ class PaymentFlowViewModel {
         return card != nil
     }
     
+    var savedCard: CreditCard? {
+        return CreditCardPersistenceManager.shared.getCard()
+    }
+    
     var username: String {
         return user?.username ?? ""
     }
@@ -53,6 +57,8 @@ class PaymentFlowViewModel {
     
     func setCreditCard(card: CreditCard) {
         self.card = card
+        CreditCardPersistenceManager.shared.deleteCard()
+        CreditCardPersistenceManager.shared.createCard(card)
         paymentModel.setCreditCardInfo(card: card)
     }
     

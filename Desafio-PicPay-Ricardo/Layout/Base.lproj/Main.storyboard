@@ -45,6 +45,7 @@
                     <navigationItem key="navigationItem" title="Contatos" id="EcR-Tq-DBz"/>
                     <connections>
                         <segue destination="2SV-4z-O2L" kind="show" identifier="goToCreditCardOnboarding" id="x9c-HA-448"/>
+                        <segue destination="EP2-Dp-sNL" kind="show" identifier="goToConfirmation" id="0ch-Ui-1Qr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3h-Aw-ozL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -127,7 +128,7 @@
             <objects>
                 <tableViewController id="HO6-or-GAc" customClass="NewCreditCardViewController" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fJw-Al-AIu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
@@ -317,11 +318,11 @@
             <objects>
                 <viewController id="EP2-Dp-sNL" customClass="ConfirmationViewController" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bBF-Rz-VhU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L5e-9M-Kjl">
-                                <rect key="frame" x="162.5" y="28" width="50" height="50"/>
+                                <rect key="frame" x="162.5" y="8" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="FgR-z0-IGA"/>
                                     <constraint firstAttribute="height" constant="50" id="YRu-Xn-9Sk"/>
@@ -333,13 +334,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXk-eq-UmX">
-                                <rect key="frame" x="20" y="86" width="335" height="18"/>
+                                <rect key="frame" x="20" y="66" width="335" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXF-k9-uFA">
-                                <rect key="frame" x="131" y="136" width="113.5" height="65"/>
+                                <rect key="frame" x="131" y="116" width="113.5" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="1cM-7A-B6T"/>
                                 </constraints>
@@ -353,7 +354,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZP-93-m06">
-                                <rect key="frame" x="20" y="241" width="335" height="29"/>
+                                <rect key="frame" x="20" y="221" width="335" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -363,7 +364,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hP-Pz-Yy7" customClass="RHButton" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target">
-                                <rect key="frame" x="12" y="300" width="351" height="48"/>
+                                <rect key="frame" x="12" y="280" width="351" height="48"/>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="QC1-pk-bML"/>
@@ -383,7 +384,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dl0-sI-tcd">
-                                <rect key="frame" x="100" y="157.5" width="23" height="22"/>
+                                <rect key="frame" x="100" y="137.5" width="23" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.5607843137254902" green="0.5725490196078431" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -429,6 +430,7 @@
         <image name="ilustration_creditcard" width="150" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="0ch-Ui-1Qr"/>
         <segue reference="YyR-Fv-T8u"/>
     </inferredMetricsTieBreakers>
 </document>

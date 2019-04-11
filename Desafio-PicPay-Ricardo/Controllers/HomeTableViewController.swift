@@ -75,12 +75,21 @@ class HomeTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         let userVM = viewModel.user(at: indexPath.row)
         viewModel.paymentViewModel.setUser(user: userVM.user)
-        self.performSegue(withIdentifier: R.segue.homeTableViewController.goToCreditCardOnboarding, sender: nil)
+        
+        if let savedCard = viewModel.paymentViewModel.savedCard {
+            viewModel.paymentViewModel.setCreditCard(card: savedCard)
+            self.performSegue(withIdentifier: R.segue.homeTableViewController.goToConfirmation, sender: nil)
+        } else {
+            self.performSegue(withIdentifier: R.segue.homeTableViewController.goToCreditCardOnboarding, sender: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let segueVC = R.segue.homeTableViewController.goToCreditCardOnboarding(segue: segue) {
             segueVC.destination.paymentFlowViewModel = viewModel.paymentViewModel
+        } else if let segueVC = R.segue.homeTableViewController.goToConfirmation(segue: segue) {
+            segueVC.destination.paymentFlowViewModel = viewModel.paymentViewModel
+
         }
     }
 }

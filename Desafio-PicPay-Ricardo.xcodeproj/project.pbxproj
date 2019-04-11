@@ -45,6 +45,8 @@
 		FADE6183225F91FD00BAE7B1 /* PaymentFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE6182225F91FD00BAE7B1 /* PaymentFlowViewModel.swift */; };
 		FADE6185225F93DF00BAE7B1 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE6184225F93DF00BAE7B1 /* PaymentModel.swift */; };
 		FAF1B05E225FE656007D9E53 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B05D225FE656007D9E53 /* ConfirmationViewController.swift */; };
+		FAF1B062225FED10007D9E53 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B060225FED10007D9E53 /* CoreDataManager.swift */; };
+		FAF1B063225FED10007D9E53 /* MoviePersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B061225FED10007D9E53 /* MoviePersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		FADE6182225F91FD00BAE7B1 /* PaymentFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFlowViewModel.swift; sourceTree = "<group>"; };
 		FADE6184225F93DF00BAE7B1 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 		FAF1B05D225FE656007D9E53 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		FAF1B060225FED10007D9E53 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		FAF1B061225FED10007D9E53 /* MoviePersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +263,7 @@
 			children = (
 				FA934E25225EA51200E3B202 /* AppDelegate.swift */,
 				FA49FEC2225EAB7D00693C08 /* Networking */,
+				FAF1B05F225FED03007D9E53 /* Coredata */,
 				FA49FED5225EB62300693C08 /* Models */,
 				FA49FED8225EB63C00693C08 /* ViewModels */,
 				FA49FEDC225EB7A700693C08 /* Controllers */,
@@ -280,6 +285,15 @@
 				FA934E3F225EA51300E3B202 /* Info.plist */,
 			);
 			path = "Desafio-PicPay-RicardoTests";
+			sourceTree = "<group>";
+		};
+		FAF1B05F225FED03007D9E53 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				FAF1B060225FED10007D9E53 /* CoreDataManager.swift */,
+				FAF1B061225FED10007D9E53 /* MoviePersistenceManager.swift */,
+			);
+			path = Coredata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,10 +532,12 @@
 				FA934E2E225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodeld in Sources */,
 				FADE6183225F91FD00BAE7B1 /* PaymentFlowViewModel.swift in Sources */,
 				FA1613D5225ED7BE00F0B055 /* AppColors.swift in Sources */,
+				FAF1B063225FED10007D9E53 /* MoviePersistenceManager.swift in Sources */,
 				FA49FECE225EAC4A00693C08 /* UIViewController+Extensions.swift in Sources */,
 				FA1613E0225EECC400F0B055 /* PayFooterTableViewCell.swift in Sources */,
 				FA1613DB225EE70700F0B055 /* UITextField+Extensions.swift in Sources */,
 				FA49FED0225EAC4A00693C08 /* CustomActivityIndicator.swift in Sources */,
+				FAF1B062225FED10007D9E53 /* CoreDataManager.swift in Sources */,
 				FA49FED1225EAC4A00693C08 /* JSONDecoder+Extensions.swift in Sources */,
 				FA1613C5225EB8A100F0B055 /* HomeTableViewController.swift in Sources */,
 				FA49FEDA225EB65000693C08 /* HomeViewModel.swift in Sources */,
