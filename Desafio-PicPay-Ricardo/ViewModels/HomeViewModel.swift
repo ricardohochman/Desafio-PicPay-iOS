@@ -15,6 +15,9 @@ class HomeViewModel {
     
     // MARK: - Variables
     private var users = [UserViewModel]()
+    private var filteredUsers = [UserViewModel]()
+    
+    private var searchText: String?
     
     // MARK: - Init
     init(api: MainAPI = MainAPI()) {
@@ -28,6 +31,7 @@ class HomeViewModel {
             switch result {
             case .success(let users):
                 self.users = users.map { UserViewModel(user: $0) }
+                self.filteredUsers = self.users
                 completion(nil)
             case .failure(let err):
                 completion(err)
@@ -38,11 +42,24 @@ class HomeViewModel {
     // MARK: - Data Source
     
     func numberOfRows() -> Int {
-        return users.count
+        return filteredUsers.count
     }
     
     func user(at index: Int) -> UserViewModel {
-        return users[index]
+        return filteredUsers[index]
+    }
+    
+    func filterUsers(text: String) {
+        searchText = text
+        if text.isEmpty {
+            filteredUsers = users
+        } else {
+            filteredUsers = users.filter { $0.name.localizedCaseInsensitiveContains(text) || $0.username.localizedCaseInsensitiveContains(text) }
+        }
+    }
+    
+    func getSearchText() -> String? {
+        return searchText
     }
 }
 
