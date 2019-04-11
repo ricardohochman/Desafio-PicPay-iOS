@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0717B74134272E2A8F299B19 /* Pods_Desafio_PicPay_Ricardo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE26AF9B7CB48CF6AA6B779 /* Pods_Desafio_PicPay_Ricardo.framework */; };
 		5FB7BC2CA9B4C0EC1502A93F /* Pods_Desafio_PicPay_RicardoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB227B35E6A527EEB8150FD /* Pods_Desafio_PicPay_RicardoTests.framework */; };
+		FA1613C5225EB8A100F0B055 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613C4225EB8A100F0B055 /* HomeTableViewController.swift */; };
+		FA1613C8225EBB5E00F0B055 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613C6225EBB5E00F0B055 /* UserTableViewCell.swift */; };
+		FA1613C9225EBB5E00F0B055 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1613C7225EBB5E00F0B055 /* UserTableViewCell.xib */; };
 		FA49FEC1225EAAF800693C08 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC0225EAAF800693C08 /* R.generated.swift */; };
 		FA49FEC4225EAB9900693C08 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC3225EAB9900693C08 /* RequestManager.swift */; };
 		FA49FECD225EAC4A00693C08 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */; };
@@ -21,7 +24,6 @@
 		FA49FED7225EB62D00693C08 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FED6225EB62D00693C08 /* User.swift */; };
 		FA49FEDA225EB65000693C08 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FED9225EB65000693C08 /* HomeViewModel.swift */; };
 		FA934E26225EA51200E3B202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA934E25225EA51200E3B202 /* AppDelegate.swift */; };
-		FA934E28225EA51200E3B202 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA934E27225EA51200E3B202 /* ViewController.swift */; };
 		FA934E2B225EA51200E3B202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA934E29225EA51200E3B202 /* Main.storyboard */; };
 		FA934E2E225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA934E2C225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodeld */; };
 		FA934E30225EA51300E3B202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA934E2F225EA51300E3B202 /* Assets.xcassets */; };
@@ -46,6 +48,9 @@
 		A6B034967242A0158E59B79E /* Pods-Desafio-PicPay-Ricardo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio-PicPay-Ricardo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo.release.xcconfig"; sourceTree = "<group>"; };
 		B75C8CF82AF9076033603124 /* Pods-Desafio-PicPay-RicardoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio-PicPay-RicardoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio-PicPay-RicardoTests/Pods-Desafio-PicPay-RicardoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4915BEFDE0235BD12117B51 /* Pods-Desafio-PicPay-RicardoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio-PicPay-RicardoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio-PicPay-RicardoTests/Pods-Desafio-PicPay-RicardoTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA1613C4225EB8A100F0B055 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		FA1613C6225EBB5E00F0B055 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		FA1613C7225EBB5E00F0B055 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		FA49FEC0225EAAF800693C08 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FA49FEC3225EAB9900693C08 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -59,7 +64,6 @@
 		FA49FED9225EB65000693C08 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FA934E22225EA51200E3B202 /* Desafio-PicPay-Ricardo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio-PicPay-Ricardo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA934E25225EA51200E3B202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA934E27225EA51200E3B202 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA934E2A225EA51200E3B202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA934E2D225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Desafio_PicPay_Ricardo.xcdatamodel; sourceTree = "<group>"; };
 		FA934E2F225EA51300E3B202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,6 +160,32 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		FA49FEDB225EB79C00693C08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA1613C6225EBB5E00F0B055 /* UserTableViewCell.swift */,
+				FA1613C7225EBB5E00F0B055 /* UserTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA49FEDC225EB7A700693C08 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA1613C4225EB8A100F0B055 /* HomeTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA49FEDE225EB7C500693C08 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				FA934E29225EA51200E3B202 /* Main.storyboard */,
+				FA934E31225EA51300E3B202 /* LaunchScreen.storyboard */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		FA934E19225EA51200E3B202 = {
 			isa = PBXGroup;
 			children = (
@@ -179,15 +209,15 @@
 		FA934E24225EA51200E3B202 /* Desafio-PicPay-Ricardo */ = {
 			isa = PBXGroup;
 			children = (
+				FA934E25225EA51200E3B202 /* AppDelegate.swift */,
 				FA49FEC2225EAB7D00693C08 /* Networking */,
 				FA49FED5225EB62300693C08 /* Models */,
 				FA49FED8225EB63C00693C08 /* ViewModels */,
-				FA934E25225EA51200E3B202 /* AppDelegate.swift */,
-				FA934E27225EA51200E3B202 /* ViewController.swift */,
-				FA934E29225EA51200E3B202 /* Main.storyboard */,
+				FA49FEDC225EB7A700693C08 /* Controllers */,
+				FA49FEDB225EB79C00693C08 /* Views */,
+				FA49FEDE225EB7C500693C08 /* Layout */,
 				FA934E2F225EA51300E3B202 /* Assets.xcassets */,
 				FA49FEC5225EAC0B00693C08 /* Extensions */,
-				FA934E31225EA51300E3B202 /* LaunchScreen.storyboard */,
 				FA934E34225EA51300E3B202 /* Info.plist */,
 				FA934E2C225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodeld */,
 				FA0C151E225EAA960026E835 /* Resources */,
@@ -290,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1613C9225EBB5E00F0B055 /* UserTableViewCell.xib in Resources */,
 				FA934E33225EA51300E3B202 /* LaunchScreen.storyboard in Resources */,
 				FA934E30225EA51300E3B202 /* Assets.xcassets in Resources */,
 				FA934E2B225EA51200E3B202 /* Main.storyboard in Resources */,
@@ -427,11 +458,12 @@
 				FA49FECD225EAC4A00693C08 /* UIImageView+Extensions.swift in Sources */,
 				FA49FECF225EAC4A00693C08 /* UIView+Anchors.swift in Sources */,
 				FA49FEC4225EAB9900693C08 /* RequestManager.swift in Sources */,
+				FA1613C8225EBB5E00F0B055 /* UserTableViewCell.swift in Sources */,
 				FA934E2E225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodeld in Sources */,
 				FA49FECE225EAC4A00693C08 /* UIViewController+Extensions.swift in Sources */,
 				FA49FED0225EAC4A00693C08 /* CustomActivityIndicator.swift in Sources */,
 				FA49FED1225EAC4A00693C08 /* JSONDecoder+Extensions.swift in Sources */,
-				FA934E28225EA51200E3B202 /* ViewController.swift in Sources */,
+				FA1613C5225EB8A100F0B055 /* HomeTableViewController.swift in Sources */,
 				FA49FEDA225EB65000693C08 /* HomeViewModel.swift in Sources */,
 				FA934E26225EA51200E3B202 /* AppDelegate.swift in Sources */,
 				FA49FEC1225EAAF800693C08 /* R.generated.swift in Sources */,
