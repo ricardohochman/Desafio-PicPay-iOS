@@ -18,4 +18,8 @@ class CreditCardOnboardingViewController: UIViewController {
         super.viewWillAppear(animated)
         self.setupNavigationGreenBack()
     }
+    
+    @IBAction func goToNewCreditCard() {
+        self.performSegue(withIdentifier: R.segue.creditCardOnboardingViewController.goToNewCreditCard, sender: nil)
+    }
 }

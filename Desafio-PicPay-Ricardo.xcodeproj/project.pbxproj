@@ -17,6 +17,8 @@
 		FA1613D1225ED53500F0B055 /* RHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D0225ED53500F0B055 /* RHButton.swift */; };
 		FA1613D3225ED60A00F0B055 /* CreditCardOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D2225ED60A00F0B055 /* CreditCardOnboardingViewController.swift */; };
 		FA1613D5225ED7BE00F0B055 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D4225ED7BE00F0B055 /* AppColors.swift */; };
+		FA1613D7225EDAC400F0B055 /* NewCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D6225EDAC400F0B055 /* NewCreditCardViewController.swift */; };
+		FA1613D9225EDCBE00F0B055 /* RHFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D8225EDCBE00F0B055 /* RHFloatingTextField.swift */; };
 		FA49FEC1225EAAF800693C08 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC0225EAAF800693C08 /* R.generated.swift */; };
 		FA49FEC4225EAB9900693C08 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC3225EAB9900693C08 /* RequestManager.swift */; };
 		FA49FECD225EAC4A00693C08 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */; };
@@ -61,6 +63,8 @@
 		FA1613D0225ED53500F0B055 /* RHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHButton.swift; sourceTree = "<group>"; };
 		FA1613D2225ED60A00F0B055 /* CreditCardOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardOnboardingViewController.swift; sourceTree = "<group>"; };
 		FA1613D4225ED7BE00F0B055 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		FA1613D6225EDAC400F0B055 /* NewCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCreditCardViewController.swift; sourceTree = "<group>"; };
+		FA1613D8225EDCBE00F0B055 /* RHFloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHFloatingTextField.swift; sourceTree = "<group>"; };
 		FA49FEC0225EAAF800693C08 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FA49FEC3225EAB9900693C08 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				FA49FECA225EAC0B00693C08 /* JSONDecoder+Extensions.swift */,
 				FA49FECB225EAC0B00693C08 /* Dictionary+Extensions.swift */,
 				FA1613D4225ED7BE00F0B055 /* AppColors.swift */,
+				FA1613D8225EDCBE00F0B055 /* RHFloatingTextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 			children = (
 				FA1613C4225EB8A100F0B055 /* HomeTableViewController.swift */,
 				FA1613D2225ED60A00F0B055 /* CreditCardOnboardingViewController.swift */,
+				FA1613D6225EDAC400F0B055 /* NewCreditCardViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1613D3225ED60A00F0B055 /* CreditCardOnboardingViewController.swift in Sources */,
+				FA1613D9225EDCBE00F0B055 /* RHFloatingTextField.swift in Sources */,
 				FA49FED7225EB62D00693C08 /* User.swift in Sources */,
 				FA49FECD225EAC4A00693C08 /* UIImageView+Extensions.swift in Sources */,
 				FA49FECF225EAC4A00693C08 /* UIView+Anchors.swift in Sources */,
@@ -484,6 +491,7 @@
 				FA49FED1225EAC4A00693C08 /* JSONDecoder+Extensions.swift in Sources */,
 				FA1613C5225EB8A100F0B055 /* HomeTableViewController.swift in Sources */,
 				FA49FEDA225EB65000693C08 /* HomeViewModel.swift in Sources */,
+				FA1613D7225EDAC400F0B055 /* NewCreditCardViewController.swift in Sources */,
 				FA934E26225EA51200E3B202 /* AppDelegate.swift in Sources */,
 				FA1613CC225EC12700F0B055 /* SearchHeaderTableViewCell.swift in Sources */,
 				FA49FEC1225EAAF800693C08 /* R.generated.swift in Sources */,
