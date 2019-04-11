@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,10 +43,81 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Contatos" id="EcR-Tq-DBz"/>
+                    <connections>
+                        <segue destination="2SV-4z-O2L" kind="show" identifier="goToCreditCardOnboarding" id="x9c-HA-448"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3h-Aw-ozL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="659" y="-583"/>
         </scene>
+        <!--Credit Card Onboarding View Controller-->
+        <scene sceneID="e6Z-RT-cQr">
+            <objects>
+                <viewController id="2SV-4z-O2L" customClass="CreditCardOnboardingViewController" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="loQ-VT-oxy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastre um cartão de crédito" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpa-Zl-osW">
+                                <rect key="frame" x="32" y="263.5" width="311" height="76.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para fazer pagamentos para outras pessoas você precisa cadastrar um cartão de crédito pessoal." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQJ-T9-mJv">
+                                <rect key="frame" x="40" y="356" width="295" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ilustration_creditcard" translatesAutoresizingMaskIntoConstraints="NO" id="ASg-ns-7IK">
+                                <rect key="frame" x="112.5" y="147.5" width="150" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2BY-fw-KIs"/>
+                                    <constraint firstAttribute="height" constant="100" id="gTn-zX-j9L"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nX-Z3-vy1" customClass="RHButton" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target">
+                                <rect key="frame" x="12" y="543" width="351" height="48"/>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.7803921568627451" blue="0.43529411764705883" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Wgw-MD-cvn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Cadastrar cartão">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ASg-ns-7IK" firstAttribute="centerX" secondItem="loQ-VT-oxy" secondAttribute="centerX" id="3pb-iw-4T9"/>
+                            <constraint firstItem="DfU-zn-Scp" firstAttribute="trailing" secondItem="gpa-Zl-osW" secondAttribute="trailing" constant="32" id="AbZ-Dj-rMJ"/>
+                            <constraint firstItem="gpa-Zl-osW" firstAttribute="centerY" secondItem="loQ-VT-oxy" secondAttribute="centerY" id="Phj-E4-uqr"/>
+                            <constraint firstItem="DfU-zn-Scp" firstAttribute="bottom" secondItem="8nX-Z3-vy1" secondAttribute="bottom" constant="12" id="Yji-8u-gQ9"/>
+                            <constraint firstItem="DfU-zn-Scp" firstAttribute="trailing" secondItem="NQJ-T9-mJv" secondAttribute="trailing" constant="40" id="Zgv-19-E2o"/>
+                            <constraint firstItem="gpa-Zl-osW" firstAttribute="leading" secondItem="DfU-zn-Scp" secondAttribute="leading" constant="32" id="bJi-Ji-fo7"/>
+                            <constraint firstItem="NQJ-T9-mJv" firstAttribute="leading" secondItem="DfU-zn-Scp" secondAttribute="leading" constant="40" id="dA3-i3-jFD"/>
+                            <constraint firstItem="8nX-Z3-vy1" firstAttribute="leading" secondItem="DfU-zn-Scp" secondAttribute="leading" constant="12" id="dns-a4-cNm"/>
+                            <constraint firstItem="gpa-Zl-osW" firstAttribute="top" secondItem="ASg-ns-7IK" secondAttribute="bottom" constant="16" id="fjY-yp-iqM"/>
+                            <constraint firstItem="DfU-zn-Scp" firstAttribute="trailing" secondItem="8nX-Z3-vy1" secondAttribute="trailing" constant="12" id="kML-F3-5TS"/>
+                            <constraint firstItem="NQJ-T9-mJv" firstAttribute="top" secondItem="gpa-Zl-osW" secondAttribute="bottom" constant="16" id="ydd-Mn-S90"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DfU-zn-Scp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q3c-SZ-uMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="-583"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ilustration_creditcard" width="150" height="100"/>
+    </resources>
 </document>

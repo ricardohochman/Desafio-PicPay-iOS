@@ -44,4 +44,9 @@ extension UIViewController {
         }
     }
     
+    func setupNavigationGreenBack() {
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.tintColor = AppColors.green
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
 }

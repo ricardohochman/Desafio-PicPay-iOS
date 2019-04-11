@@ -15,18 +15,22 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigation()
         setupTableView()
         loadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigation()
+    }
+    
     private func setupNavigation() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     private func setupTableView() {
         tableView.rowHeight = 80
-//        navigationController?.hidesBarsOnSwipe = true
     }
     
     // MARK: - API
@@ -64,6 +68,12 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let user = viewModel.user(at: indexPath.row)
+        self.performSegue(withIdentifier: R.segue.homeTableViewController.goToCreditCardOnboarding, sender: nil)
     }
 }
 
