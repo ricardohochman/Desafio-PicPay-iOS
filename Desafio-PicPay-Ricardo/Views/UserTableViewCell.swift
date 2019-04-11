@@ -6,7 +6,6 @@
 //  Copyright © 2019 Ricardo Hochman. All rights reserved.
 //
 
-import AlamofireImage
 import UIKit
 
 class UserTableViewCell: UITableViewCell {
@@ -16,9 +15,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
     func setup(viewModel: UserViewModel) {
-        if let url = viewModel.image {
-            mainImageView.af_setImage(withURL: url)
-        }
+        mainImageView.setImage(with: viewModel.image)
         usernameLabel.text = viewModel.username
         nameLabel.text = viewModel.name
     }

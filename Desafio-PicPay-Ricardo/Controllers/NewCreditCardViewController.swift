@@ -10,11 +10,16 @@ import UIKit
 
 class NewCreditCardViewController: UITableViewController {
 
+    // MARK: - Outlets
     @IBOutlet private weak var numberTextField: RHFloatingTextField!
     @IBOutlet private weak var nameTextField: RHFloatingTextField!
     @IBOutlet private weak var expireTextField: RHFloatingTextField!
     @IBOutlet private weak var cvvTextField: RHFloatingTextField!
     
+    // MARK: - Constants
+    private let footer = R.nib.payFooterTableViewCell(owner: nil)
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -40,19 +45,29 @@ class NewCreditCardViewController: UITableViewController {
             !(nameTextField.text?.isEmpty ?? true) &&
             !(expireTextField.text?.isEmpty ?? true) &&
             !(cvvTextField.text?.isEmpty ?? true) {
-            print("mostra o salvar")
+            showFooter(true)
         } else {
-            guard let footer = self.tableView(tableView, viewForFooterInSection: 0) as? PayFooterTableViewCell else { return }
-            footer.hideButton()
+            showFooter(false)
         }
     }
     
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        guard let footer = R.nib.payFooterTableViewCell(owner: nil) else { return nil }
-        return footer
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 60
+    private func showFooter(_ value: Bool) {
+        if value {
+            if self.tableView.tableFooterView == nil {
+                self.tableView.tableFooterView = self.footer
+                self.tableView.tableFooterView?.alpha = 0.0
+                UIView.animate(withDuration: 0.25) {
+                    self.tableView.tableFooterView?.alpha = 1.0
+                }
+            }
+        } else {
+            if self.tableView.tableFooterView != nil {
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.tableView.tableFooterView?.alpha = 0.0
+                }, completion: { _ in
+                    self.tableView.tableFooterView = nil
+                })
+            }
+        }
     }
 }

@@ -424,7 +424,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
@@ -441,7 +441,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA48BBEB225EA94A003CE401 /* RSwift */ = {
@@ -458,7 +458,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

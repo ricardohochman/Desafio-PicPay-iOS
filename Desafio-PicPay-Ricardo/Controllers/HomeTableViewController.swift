@@ -21,12 +21,7 @@ class HomeTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavigation()
-    }
-    
-    private func setupNavigation() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        setupNavigationLargeTitle()
     }
     
     private func setupTableView() {
@@ -43,6 +38,12 @@ class HomeTableViewController: UITableViewController {
                 print("Falha em carregar o dados", err.localizedDescription)
             } else {
                 self.tableView.reloadData()
+                for (index, cell) in self.tableView.visibleCells.enumerated() {
+                    cell.transform = CGAffineTransform(translationX: 0, y: 80)
+                    UIView.animate(withDuration: 0.5, delay: 0.05 * Double(index), usingSpringWithDamping: 1, initialSpringVelocity: 0.1, options: [.curveEaseInOut], animations: {
+                        cell.transform = .identity
+                    })
+                }
             }
         }
     }

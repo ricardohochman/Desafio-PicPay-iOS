@@ -44,6 +44,12 @@ extension UIViewController {
         }
     }
     
+    func setupNavigationLargeTitle() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
     func setupNavigationGreenBack() {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.tintColor = AppColors.green

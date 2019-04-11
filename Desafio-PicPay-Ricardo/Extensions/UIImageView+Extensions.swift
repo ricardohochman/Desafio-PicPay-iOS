@@ -11,12 +11,9 @@ import UIKit
 
 extension UIImageView {
     
-    func setImageWithPlaceholder(with URL: URL) {
-        self.af_setImage(withURL: URL, placeholderImage: #imageLiteral(resourceName: "moviePlaceholder"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false)
-    }
-    
-    func setImage(with URL: URL) {
-        self.af_setImage(withURL: URL, imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false)
+    func setImage(with url: URL?) {
+        guard let url = url else { return }
+        self.af_setImage(withURL: url, imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false)
     }
 
 }
