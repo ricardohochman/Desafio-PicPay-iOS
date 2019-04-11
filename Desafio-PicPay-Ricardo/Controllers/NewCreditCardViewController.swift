@@ -123,10 +123,10 @@ class NewCreditCardViewController: UITableViewController {
 
 extension NewCreditCardViewController: PayFooterDelegate {
     func pay() {
-        if !isValidCardNumber() {
-            showAlert(message: "Número do cartão de crédito inválido")
-            return
-        }
+//        if !isValidCardNumber() {
+//            showAlert(message: "Número do cartão de crédito inválido")
+//            return
+//        }
         
         let number = numberTextField.text ?? ""
         let name = nameTextField.text ?? ""

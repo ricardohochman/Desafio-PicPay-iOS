@@ -47,6 +47,7 @@
 		FAF1B05E225FE656007D9E53 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B05D225FE656007D9E53 /* ConfirmationViewController.swift */; };
 		FAF1B062225FED10007D9E53 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B060225FED10007D9E53 /* CoreDataManager.swift */; };
 		FAF1B063225FED10007D9E53 /* MoviePersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B061225FED10007D9E53 /* MoviePersistenceManager.swift */; };
+		FAF1B065225FFBD8007D9E53 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B064225FFBD8007D9E53 /* PaymentResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		FAF1B05D225FE656007D9E53 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		FAF1B060225FED10007D9E53 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FAF1B061225FED10007D9E53 /* MoviePersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePersistenceManager.swift; sourceTree = "<group>"; };
+		FAF1B064225FFBD8007D9E53 /* PaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				FA49FED6225EB62D00693C08 /* User.swift */,
 				FADE617E225F870000BAE7B1 /* CreditCard.swift */,
 				FADE6184225F93DF00BAE7B1 /* PaymentModel.swift */,
+				FAF1B064225FFBD8007D9E53 /* PaymentResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				FA1613DD225EE74100F0B055 /* String+Extensions.swift in Sources */,
 				FA49FEC1225EAAF800693C08 /* R.generated.swift in Sources */,
 				FA49FED2225EAC4A00693C08 /* Dictionary+Extensions.swift in Sources */,
+				FAF1B065225FFBD8007D9E53 /* PaymentResponse.swift in Sources */,
 				FADE6181225F8AC500BAE7B1 /* CreditCardManager.swift in Sources */,
 				FA49FED4225EADEC00693C08 /* MainAPI.swift in Sources */,
 			);

@@ -10,10 +10,19 @@ import UIKit
 
 class PaymentFlowViewModel {
     
+    // MARK: - Constants
+    private let api: MainAPI
+    
     // MARK: - Variables
     private var paymentModel = PaymentModel()
     private var user: User?
     var card: CreditCard?
+    var response: PaymentResponse?
+    
+    // MARK: - Init
+    init(api: MainAPI = MainAPI()) {
+        self.api = api
+    }
     
     // MARK: - Parameters
     
@@ -66,4 +75,20 @@ class PaymentFlowViewModel {
         paymentModel.setValue(value: value)
     }
     
+    func pay(completion: @escaping (Bool) -> Void) {
+        api.pay(payment: paymentModel) { result in
+            switch result {
+            case .success(let response):
+                self.response = response
+                if response.transaction.success == true {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+            case .failure(let err):
+                print("Falha no pagamento", err)
+                completion(false)
+            }
+        }
+    }
 }

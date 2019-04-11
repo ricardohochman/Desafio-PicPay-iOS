@@ -23,4 +23,12 @@ class MainAPI {
         
         requestManager.requestArray(url: url, method: .get, parameters: [:], headers: [:], completion: completion)
     }
+    
+    func pay(payment: PaymentModel, completion: @escaping (Result<PaymentResponse>) -> Void) {
+        guard let url = URL(string: "http://careers.picpay.com/tests/mobdev/transaction") else {
+            fatalError("Invalid URL")
+        }
+        
+        requestManager.request(url: url, method: .post, parameters: payment.dictionary ?? [:], headers: [:], completion: completion)
+    }
 }

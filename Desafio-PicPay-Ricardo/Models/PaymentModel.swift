@@ -22,7 +22,7 @@ struct PaymentModel: Codable {
     }
     
     mutating func setCreditCardInfo(card: CreditCard) {
-        self.cardNumber = card.number
+        self.cardNumber = card.number?.replacingOccurrences(of: " ", with: "")
         self.cvv = Int(card.cvv ?? "")
         self.expiryDate = card.expiracy
     }
