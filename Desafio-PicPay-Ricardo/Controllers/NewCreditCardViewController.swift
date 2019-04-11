@@ -20,6 +20,7 @@ class NewCreditCardViewController: UITableViewController {
     }
     
     @IBAction func editingChanged(_ sender: RHFloatingTextField) {
+        checkFields()
         switch sender {
         case numberTextField:
             sender.maskCreditCard()
@@ -32,5 +33,26 @@ class NewCreditCardViewController: UITableViewController {
         default:
             break
         }
+    }
+    
+    private func checkFields() {
+        if !(numberTextField.text?.isEmpty ?? true) &&
+            !(nameTextField.text?.isEmpty ?? true) &&
+            !(expireTextField.text?.isEmpty ?? true) &&
+            !(cvvTextField.text?.isEmpty ?? true) {
+            print("mostra o salvar")
+        } else {
+            guard let footer = self.tableView(tableView, viewForFooterInSection: 0) as? PayFooterTableViewCell else { return }
+            footer.hideButton()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard let footer = R.nib.payFooterTableViewCell(owner: nil) else { return nil }
+        return footer
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 60
     }
 }
