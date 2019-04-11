@@ -10,6 +10,7 @@ import UIKit
 
 enum AppColors {
     static let green = UIColor(hexString: "#11C76F")
+    static let gray = UIColor(hexString: "#8F929D")
 }
 
 extension UIColor {

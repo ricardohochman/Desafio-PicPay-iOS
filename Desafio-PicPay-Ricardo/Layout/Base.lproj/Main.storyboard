@@ -352,6 +352,9 @@
                                         <color key="value" red="0.5607843137254902" green="0.5725490196078431" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldDidChange" destination="EP2-Dp-sNL" eventType="editingChanged" id="D9v-Cw-yDR"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZP-93-m06">
                                 <rect key="frame" x="20" y="221" width="335" height="29"/>
@@ -384,7 +387,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dl0-sI-tcd">
-                                <rect key="frame" x="100" y="137.5" width="23" height="22"/>
+                                <rect key="frame" x="104" y="137.5" width="23" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.5607843137254902" green="0.5725490196078431" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -392,7 +395,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CXF-k9-uFA" firstAttribute="leading" secondItem="Dl0-sI-tcd" secondAttribute="trailing" constant="8" id="3AP-1u-qhk"/>
+                            <constraint firstItem="CXF-k9-uFA" firstAttribute="leading" secondItem="Dl0-sI-tcd" secondAttribute="trailing" constant="4" id="3AP-1u-qhk"/>
                             <constraint firstItem="gXk-eq-UmX" firstAttribute="top" secondItem="L5e-9M-Kjl" secondAttribute="bottom" constant="8" id="6TV-eI-31U"/>
                             <constraint firstItem="gXk-eq-UmX" firstAttribute="leading" secondItem="FY7-am-kTN" secondAttribute="leading" constant="20" id="DrY-Y5-ifp"/>
                             <constraint firstItem="7hP-Pz-Yy7" firstAttribute="top" secondItem="iZP-93-m06" secondAttribute="bottom" constant="30" id="ExT-hP-oDP"/>
@@ -401,8 +404,8 @@
                             <constraint firstItem="7hP-Pz-Yy7" firstAttribute="leading" secondItem="FY7-am-kTN" secondAttribute="leading" constant="12" id="Ouh-J6-jh7"/>
                             <constraint firstItem="CXF-k9-uFA" firstAttribute="centerX" secondItem="bBF-Rz-VhU" secondAttribute="centerX" id="RUC-N8-5Vh"/>
                             <constraint firstItem="L5e-9M-Kjl" firstAttribute="top" secondItem="FY7-am-kTN" secondAttribute="top" constant="8" id="Vdx-fp-LdZ"/>
-                            <constraint firstItem="CXF-k9-uFA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FY7-am-kTN" secondAttribute="leading" constant="20" id="XzG-ti-EKs"/>
                             <constraint firstItem="FY7-am-kTN" firstAttribute="trailing" secondItem="gXk-eq-UmX" secondAttribute="trailing" constant="20" id="eEH-g9-If4"/>
+                            <constraint firstItem="FY7-am-kTN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CXF-k9-uFA" secondAttribute="trailing" constant="60" id="eeV-jY-zMi"/>
                             <constraint firstItem="L5e-9M-Kjl" firstAttribute="centerX" secondItem="bBF-Rz-VhU" secondAttribute="centerX" id="fxl-1d-OkK"/>
                             <constraint firstItem="iZP-93-m06" firstAttribute="leading" secondItem="FY7-am-kTN" secondAttribute="leading" constant="20" id="ho3-KU-LaR"/>
                             <constraint firstItem="CXF-k9-uFA" firstAttribute="top" secondItem="gXk-eq-UmX" secondAttribute="bottom" constant="32" id="imj-1d-8oG"/>
@@ -414,6 +417,7 @@
                     </view>
                     <connections>
                         <outlet property="changeCardButton" destination="iZP-93-m06" id="m3V-Bf-Hzv"/>
+                        <outlet property="currencyLabel" destination="Dl0-sI-tcd" id="edZ-qm-8jj"/>
                         <outlet property="payButton" destination="7hP-Pz-Yy7" id="vVh-3R-uEX"/>
                         <outlet property="priceTextField" destination="CXF-k9-uFA" id="Ggf-r3-1gd"/>
                         <outlet property="userImageView" destination="L5e-9M-Kjl" id="fK5-OQ-Pfc"/>
