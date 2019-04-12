@@ -1,9 +1,9 @@
 //
 //  CreditCardManager.swift
-//  Jumpers
+//  Desafio-PicPay-Ricardo
 //
-//  Created by 005_FVFX21BGJ1WV on 06/03/19.
-//  Copyright © 2019 Outsmart. All rights reserved.
+//  Created by Ricardo Hochman on 11/04/19.
+//  Copyright © 2019 Ricardo Hochman. All rights reserved.
 //
 
 import Foundation

@@ -96,7 +96,7 @@
 		FA49FED3225EADEC00693C08 /* MainAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAPI.swift; sourceTree = "<group>"; };
 		FA49FED6225EB62D00693C08 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA49FED9225EB65000693C08 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		FA934E22225EA51200E3B202 /* Desafio-PicPay-Ricardo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio-PicPay-Ricardo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA934E22225EA51200E3B202 /* RPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA934E25225EA51200E3B202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA934E2A225EA51200E3B202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA934E2D225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Desafio_PicPay_Ricardo.xcdatamodel; sourceTree = "<group>"; };
@@ -180,19 +180,13 @@
 		FA49FEC5225EAC0B00693C08 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FADE6180225F8AC500BAE7B1 /* CreditCardManager.swift */,
-				FA1613D0225ED53500F0B055 /* RHButton.swift */,
 				FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */,
 				FA49FEC7225EAC0B00693C08 /* UIViewController+Extensions.swift */,
 				FA49FEC8225EAC0B00693C08 /* UIView+Anchors.swift */,
-				FA49FEC9225EAC0B00693C08 /* CustomActivityIndicator.swift */,
 				FA49FECA225EAC0B00693C08 /* JSONDecoder+Extensions.swift */,
 				FA49FECB225EAC0B00693C08 /* Dictionary+Extensions.swift */,
-				FA1613D4225ED7BE00F0B055 /* AppColors.swift */,
-				FA1613D8225EDCBE00F0B055 /* RHFloatingTextField.swift */,
 				FA1613DA225EE70700F0B055 /* UITextField+Extensions.swift */,
 				FA1613DC225EE74100F0B055 /* String+Extensions.swift */,
-				FAF1B06622600125007D9E53 /* NotificationCenterManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -267,7 +261,7 @@
 		FA934E23225EA51200E3B202 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA934E22225EA51200E3B202 /* Desafio-PicPay-Ricardo.app */,
+				FA934E22225EA51200E3B202 /* RPay.app */,
 				FA934E39225EA51300E3B202 /* Desafio-PicPay-RicardoTests.xctest */,
 			);
 			name = Products;
@@ -285,6 +279,7 @@
 				FA49FEDB225EB79C00693C08 /* Views */,
 				FA49FEDE225EB7C500693C08 /* Layout */,
 				FA934E2F225EA51300E3B202 /* Assets.xcassets */,
+				FAF1B06E22602A23007D9E53 /* Helpers */,
 				FA49FEC5225EAC0B00693C08 /* Extensions */,
 				FA934E34225EA51300E3B202 /* Info.plist */,
 				FA934E2C225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodeld */,
@@ -311,6 +306,19 @@
 			path = Coredata;
 			sourceTree = "<group>";
 		};
+		FAF1B06E22602A23007D9E53 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA1613D4225ED7BE00F0B055 /* AppColors.swift */,
+				FADE6180225F8AC500BAE7B1 /* CreditCardManager.swift */,
+				FAF1B06622600125007D9E53 /* NotificationCenterManager.swift */,
+				FA1613D0225ED53500F0B055 /* RHButton.swift */,
+				FA1613D8225EDCBE00F0B055 /* RHFloatingTextField.swift */,
+				FA49FEC9225EAC0B00693C08 /* CustomActivityIndicator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,7 +340,7 @@
 			);
 			name = "Desafio-PicPay-Ricardo";
 			productName = "Desafio-PicPay-Ricardo";
-			productReference = FA934E22225EA51200E3B202 /* Desafio-PicPay-Ricardo.app */;
+			productReference = FA934E22225EA51200E3B202 /* RPay.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FA934E38225EA51300E3B202 /* Desafio-PicPay-RicardoTests */ = {
@@ -739,7 +747,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardohochman.Desafio-PicPay-Ricardo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RPay;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -758,7 +766,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardohochman.Desafio-PicPay-Ricardo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RPay;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
