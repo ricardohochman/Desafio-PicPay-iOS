@@ -39,7 +39,7 @@ class HomeTableViewController: UITableViewController {
         self.view.addSubview(visualEffectView)
         
         cardViewController = PaymentSuccessViewController(nibName: "PaymentSuccessViewController", bundle: nil)
-        cardViewController.viewModel = viewModel
+        cardViewController.viewModel = PaymentSuccessViewModel(viewModel: viewModel)
         self.addChild(cardViewController)
         self.view.addSubview(cardViewController.view)
         cardHeight = cardViewController.view.frame.height

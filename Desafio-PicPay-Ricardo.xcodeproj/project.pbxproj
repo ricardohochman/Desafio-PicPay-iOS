@@ -51,6 +51,7 @@
 		FAF1B06722600125007D9E53 /* NotificationCenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B06622600125007D9E53 /* NotificationCenterManager.swift */; };
 		FAF1B06A226005DD007D9E53 /* PaymentSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B068226005DD007D9E53 /* PaymentSuccessViewController.swift */; };
 		FAF1B06B226005DD007D9E53 /* PaymentSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1B069226005DD007D9E53 /* PaymentSuccessViewController.xib */; };
+		FAF1B06D22601E97007D9E53 /* PaymentSuccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B06C22601E96007D9E53 /* PaymentSuccessViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		FAF1B06622600125007D9E53 /* NotificationCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterManager.swift; sourceTree = "<group>"; };
 		FAF1B068226005DD007D9E53 /* PaymentSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccessViewController.swift; sourceTree = "<group>"; };
 		FAF1B069226005DD007D9E53 /* PaymentSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentSuccessViewController.xib; sourceTree = "<group>"; };
+		FAF1B06C22601E96007D9E53 /* PaymentSuccessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccessViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 			children = (
 				FA49FED9225EB65000693C08 /* HomeViewModel.swift */,
 				FADE6182225F91FD00BAE7B1 /* PaymentFlowViewModel.swift */,
+				FAF1B06C22601E96007D9E53 /* PaymentSuccessViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				FA934E26225EA51200E3B202 /* AppDelegate.swift in Sources */,
 				FA1613CC225EC12700F0B055 /* SearchHeaderTableViewCell.swift in Sources */,
 				FA1613DD225EE74100F0B055 /* String+Extensions.swift in Sources */,
+				FAF1B06D22601E97007D9E53 /* PaymentSuccessViewModel.swift in Sources */,
 				FA49FEC1225EAAF800693C08 /* R.generated.swift in Sources */,
 				FA49FED2225EAC4A00693C08 /* Dictionary+Extensions.swift in Sources */,
 				FAF1B065225FFBD8007D9E53 /* PaymentResponse.swift in Sources */,
