@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Desafio_PicPay_Ricardo
+@testable import RPay
 
 class Desafio_PicPay_RicardoTests: XCTestCase {
 
@@ -22,6 +22,7 @@ class Desafio_PicPay_RicardoTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
     }
 
     func testPerformanceExample() {

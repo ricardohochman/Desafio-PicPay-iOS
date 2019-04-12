@@ -13,7 +13,8 @@ target 'Desafio-PicPay-Ricardo' do
 
   target 'Desafio-PicPay-RicardoTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
   end
 
 end

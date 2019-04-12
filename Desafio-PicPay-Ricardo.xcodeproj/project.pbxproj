@@ -10,6 +10,7 @@
 		0717B74134272E2A8F299B19 /* Pods_Desafio_PicPay_Ricardo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE26AF9B7CB48CF6AA6B779 /* Pods_Desafio_PicPay_Ricardo.framework */; };
 		5FB7BC2CA9B4C0EC1502A93F /* Pods_Desafio_PicPay_RicardoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB227B35E6A527EEB8150FD /* Pods_Desafio_PicPay_RicardoTests.framework */; };
 		FA083CB6226038FB00DC0295 /* RHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA083CB5226038FB00DC0295 /* RHTextField.swift */; };
+		FA083CB82260425B00DC0295 /* CreditCardSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA083CB72260425B00DC0295 /* CreditCardSpecs.swift */; };
 		FA1613C5225EB8A100F0B055 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613C4225EB8A100F0B055 /* HomeTableViewController.swift */; };
 		FA1613C8225EBB5E00F0B055 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613C6225EBB5E00F0B055 /* UserTableViewCell.swift */; };
 		FA1613C9225EBB5E00F0B055 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1613C7225EBB5E00F0B055 /* UserTableViewCell.xib */; };
@@ -70,6 +71,7 @@
 		B75C8CF82AF9076033603124 /* Pods-Desafio-PicPay-RicardoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio-PicPay-RicardoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio-PicPay-RicardoTests/Pods-Desafio-PicPay-RicardoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4915BEFDE0235BD12117B51 /* Pods-Desafio-PicPay-RicardoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio-PicPay-RicardoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio-PicPay-RicardoTests/Pods-Desafio-PicPay-RicardoTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA083CB5226038FB00DC0295 /* RHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHTextField.swift; sourceTree = "<group>"; };
+		FA083CB72260425B00DC0295 /* CreditCardSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSpecs.swift; sourceTree = "<group>"; };
 		FA1613C4225EB8A100F0B055 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		FA1613C6225EBB5E00F0B055 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		FA1613C7225EBB5E00F0B055 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			children = (
 				FA934E3D225EA51300E3B202 /* Desafio_PicPay_RicardoTests.swift */,
 				FA934E3F225EA51300E3B202 /* Info.plist */,
+				FA083CB72260425B00DC0295 /* CreditCardSpecs.swift */,
 			);
 			path = "Desafio-PicPay-RicardoTests";
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				FA934E35225EA51300E3B202 /* Sources */,
 				FA934E36225EA51300E3B202 /* Frameworks */,
 				FA934E37225EA51300E3B202 /* Resources */,
+				C7BD520ADA1BAAC5E5C2DB90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -490,6 +494,30 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7BD520ADA1BAAC5E5C2DB90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Desafio-PicPay-RicardoTests/Pods-Desafio-PicPay-RicardoTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio-PicPay-RicardoTests/Pods-Desafio-PicPay-RicardoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FA48BBEB225EA94A003CE401 /* RSwift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -576,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA083CB82260425B00DC0295 /* CreditCardSpecs.swift in Sources */,
 				FA934E3E225EA51300E3B202 /* Desafio_PicPay_RicardoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,7 +811,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio-PicPay-Ricardo.app/Desafio-PicPay-Ricardo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPay.app/RPay";
 			};
 			name = Debug;
 		};
@@ -804,7 +833,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio-PicPay-Ricardo.app/Desafio-PicPay-Ricardo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPay.app/RPay";
 			};
 			name = Release;
 		};
