@@ -13,6 +13,10 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: RHTextField!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - Constants
     let viewModel = HomeViewModel()
     
@@ -241,6 +245,8 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
         let userVM = viewModel.user(at: indexPath.row)
         viewModel.paymentViewModel.setUser(user: userVM.user)
         
