@@ -18,8 +18,6 @@ class HomeViewModel {
     private var users = [UserViewModel]()
     private var filteredUsers = [UserViewModel]()
     
-    private var searchText: String?
-    
     // MARK: - Init
     init(api: MainAPI = MainAPI()) {
         self.api = api
@@ -51,16 +49,11 @@ class HomeViewModel {
     }
     
     func filterUsers(text: String) {
-        searchText = text
         if text.isEmpty {
             filteredUsers = users
         } else {
             filteredUsers = users.filter { $0.name.localizedCaseInsensitiveContains(text) || $0.username.localizedCaseInsensitiveContains(text) }
         }
-    }
-    
-    func getSearchText() -> String? {
-        return searchText
     }
 }
 

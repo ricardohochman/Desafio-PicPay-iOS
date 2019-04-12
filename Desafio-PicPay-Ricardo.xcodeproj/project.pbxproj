@@ -26,7 +26,6 @@
 		FA49FEC4225EAB9900693C08 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC3225EAB9900693C08 /* RequestManager.swift */; };
 		FA49FECD225EAC4A00693C08 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */; };
 		FA49FECE225EAC4A00693C08 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC7225EAC0B00693C08 /* UIViewController+Extensions.swift */; };
-		FA49FECF225EAC4A00693C08 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC8225EAC0B00693C08 /* UIView+Anchors.swift */; };
 		FA49FED0225EAC4A00693C08 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FEC9225EAC0B00693C08 /* CustomActivityIndicator.swift */; };
 		FA49FED1225EAC4A00693C08 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FECA225EAC0B00693C08 /* JSONDecoder+Extensions.swift */; };
 		FA49FED2225EAC4A00693C08 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FECB225EAC0B00693C08 /* Dictionary+Extensions.swift */; };
@@ -87,7 +86,6 @@
 		FA49FEC3225EAB9900693C08 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		FA49FEC7225EAC0B00693C08 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		FA49FEC8225EAC0B00693C08 /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
 		FA49FEC9225EAC0B00693C08 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 		FA49FECA225EAC0B00693C08 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		FA49FECB225EAC0B00693C08 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 			children = (
 				FA49FEC6225EAC0B00693C08 /* UIImageView+Extensions.swift */,
 				FA49FEC7225EAC0B00693C08 /* UIViewController+Extensions.swift */,
-				FA49FEC8225EAC0B00693C08 /* UIView+Anchors.swift */,
 				FA49FECA225EAC0B00693C08 /* JSONDecoder+Extensions.swift */,
 				FA49FECB225EAC0B00693C08 /* Dictionary+Extensions.swift */,
 				FA1613DA225EE70700F0B055 /* UITextField+Extensions.swift */,
@@ -546,7 +543,6 @@
 				FA49FECD225EAC4A00693C08 /* UIImageView+Extensions.swift in Sources */,
 				FAF1B06722600125007D9E53 /* NotificationCenterManager.swift in Sources */,
 				FADE6185225F93DF00BAE7B1 /* PaymentModel.swift in Sources */,
-				FA49FECF225EAC4A00693C08 /* UIView+Anchors.swift in Sources */,
 				FA49FEC4225EAB9900693C08 /* RequestManager.swift in Sources */,
 				FADE617F225F870000BAE7B1 /* CreditCard.swift in Sources */,
 				FA1613D1225ED53500F0B055 /* RHButton.swift in Sources */,
