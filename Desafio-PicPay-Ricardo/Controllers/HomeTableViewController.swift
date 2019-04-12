@@ -13,6 +13,147 @@ class HomeTableViewController: UITableViewController {
     // MARK: - Constants
     let viewModel = HomeViewModel()
     
+    // MARK: - Card
+    
+    enum CardState {
+        case expanded
+        case collapsed
+    }
+    
+    var cardViewController: PaymentSuccessViewController!
+    var visualEffectView: UIVisualEffectView!
+    
+    var cardHeight: CGFloat = 0.0
+    
+    var cardVisible = false
+    var nextState: CardState {
+        return cardVisible ? .collapsed : .expanded
+    }
+    
+    var runningAnimations = [UIViewPropertyAnimator]()
+    var animationProgressWhenInterrupted: CGFloat = 0
+    
+    func setupCard(viewModel: PaymentFlowViewModel) {
+        visualEffectView = UIVisualEffectView()
+        visualEffectView.frame = self.view.frame
+        self.view.addSubview(visualEffectView)
+        
+        cardViewController = PaymentSuccessViewController(nibName: "PaymentSuccessViewController", bundle: nil)
+        cardViewController.viewModel = viewModel
+        self.addChild(cardViewController)
+        self.view.addSubview(cardViewController.view)
+        cardHeight = cardViewController.view.frame.height
+        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHeight, width: self.view.bounds.width, height: cardHeight)
+        
+        cardViewController.view.clipsToBounds = true
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleCardTap(recognizer:)))
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleCardPan(recognizer:)))
+        
+        cardViewController.handleArea.addGestureRecognizer(tapGestureRecognizer)
+        cardViewController.handleArea.addGestureRecognizer(panGestureRecognizer)
+        animateTransitionIfNeeded(state: .expanded, duration: 0.9)
+    }
+    
+    @objc func handleCardTap(recognizer: UITapGestureRecognizer) {
+        switch recognizer.state {
+        case .ended:
+            animateTransitionIfNeeded(state: nextState, duration: 0.9)
+        default:
+            break
+        }
+    }
+    
+    @objc func handleCardPan(recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            startInteractiveTransition(state: nextState, duration: 0.9)
+        case .changed:
+            let translation = recognizer.translation(in: self.cardViewController.handleArea)
+            var fractionComplete = translation.y / cardHeight
+            fractionComplete = cardVisible ? fractionComplete : -fractionComplete
+            updateInteractiveTransition(fractionCompleted: fractionComplete)
+        case .ended:
+            continueInteractiveTransition()
+        default:
+            break
+        }
+    }
+    
+    func animateTransitionIfNeeded(state: CardState, duration: TimeInterval) {
+        if runningAnimations.isEmpty {
+            let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
+                switch state {
+                case .expanded:
+                    self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
+                    self.tableView.isScrollEnabled = false
+                case .collapsed:
+                    self.cardViewController.view.frame.origin.y = self.view.frame.height
+                    self.tableView.isScrollEnabled = true
+                }
+            }
+            
+            frameAnimator.addCompletion { _ in
+                self.cardVisible = !self.cardVisible
+                self.runningAnimations.removeAll()
+                if state == .collapsed {
+                    self.cardViewController.view.removeFromSuperview()
+                }
+            }
+            
+            frameAnimator.startAnimation()
+            runningAnimations.append(frameAnimator)
+            
+            let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
+                switch state {
+                case .expanded:
+                    self.cardViewController.view.layer.cornerRadius = 12
+                case .collapsed:
+                    self.cardViewController.view.layer.cornerRadius = 0
+                }
+            }
+            
+            cornerRadiusAnimator.startAnimation()
+            runningAnimations.append(cornerRadiusAnimator)
+            
+            let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
+                switch state {
+                case .expanded:
+                    self.visualEffectView.effect = UIBlurEffect(style: .dark)
+                case .collapsed:
+                    self.visualEffectView.effect = nil
+                }
+            }
+            
+            blurAnimator.startAnimation()
+            runningAnimations.append(blurAnimator)
+            
+        }
+    }
+    
+    func startInteractiveTransition(state: CardState, duration: TimeInterval) {
+        if runningAnimations.isEmpty {
+            animateTransitionIfNeeded(state: state, duration: duration)
+        }
+        for animator in runningAnimations {
+            animator.pauseAnimation()
+            animationProgressWhenInterrupted = animator.fractionComplete
+        }
+    }
+    
+    func updateInteractiveTransition(fractionCompleted: CGFloat) {
+        for animator in runningAnimations {
+            animator.fractionComplete = fractionCompleted + animationProgressWhenInterrupted
+        }
+    }
+    
+    func continueInteractiveTransition() {
+        for animator in runningAnimations {
+            animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
+        }
+    }
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -39,7 +180,7 @@ class HomeTableViewController: UITableViewController {
     
     @objc private func showPaymentSuccess(_ notification: Notification) {
         if let viewModel = NotificationCenterManager.retrievePaymentSuccess(notification) {
-            print("Suuucessoooooo", viewModel.response?.transaction.id ?? "")
+            setupCard(viewModel: viewModel)
         }
     }
     
@@ -104,7 +245,7 @@ class HomeTableViewController: UITableViewController {
             segueVC.destination.paymentFlowViewModel = viewModel.paymentViewModel
         } else if let segueVC = R.segue.homeTableViewController.goToConfirmation(segue: segue) {
             segueVC.destination.paymentFlowViewModel = viewModel.paymentViewModel
-
+            
         }
     }
 }
@@ -113,6 +254,5 @@ extension HomeTableViewController: SearchHeaderDelegate {
     func textDidChange(_ text: String) {
         viewModel.filterUsers(text: text)
         tableView.reloadData()
-        
     }
 }

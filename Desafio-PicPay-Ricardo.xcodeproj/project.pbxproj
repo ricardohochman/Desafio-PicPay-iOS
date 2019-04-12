@@ -49,6 +49,8 @@
 		FAF1B063225FED10007D9E53 /* MoviePersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B061225FED10007D9E53 /* MoviePersistenceManager.swift */; };
 		FAF1B065225FFBD8007D9E53 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B064225FFBD8007D9E53 /* PaymentResponse.swift */; };
 		FAF1B06722600125007D9E53 /* NotificationCenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B06622600125007D9E53 /* NotificationCenterManager.swift */; };
+		FAF1B06A226005DD007D9E53 /* PaymentSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B068226005DD007D9E53 /* PaymentSuccessViewController.swift */; };
+		FAF1B06B226005DD007D9E53 /* PaymentSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1B069226005DD007D9E53 /* PaymentSuccessViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		FAF1B061225FED10007D9E53 /* MoviePersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePersistenceManager.swift; sourceTree = "<group>"; };
 		FAF1B064225FFBD8007D9E53 /* PaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
 		FAF1B06622600125007D9E53 /* NotificationCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterManager.swift; sourceTree = "<group>"; };
+		FAF1B068226005DD007D9E53 /* PaymentSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccessViewController.swift; sourceTree = "<group>"; };
+		FAF1B069226005DD007D9E53 /* PaymentSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentSuccessViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,8 @@
 				FA1613CB225EC12700F0B055 /* SearchHeaderTableViewCell.xib */,
 				FA1613DE225EECC400F0B055 /* PayFooterTableViewCell.swift */,
 				FA1613DF225EECC400F0B055 /* PayFooterTableViewCell.xib */,
+				FAF1B068226005DD007D9E53 /* PaymentSuccessViewController.swift */,
+				FAF1B069226005DD007D9E53 /* PaymentSuccessViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 				FA1613E1225EECC400F0B055 /* PayFooterTableViewCell.xib in Resources */,
 				FA934E33225EA51300E3B202 /* LaunchScreen.storyboard in Resources */,
 				FA934E30225EA51300E3B202 /* Assets.xcassets in Resources */,
+				FAF1B06B226005DD007D9E53 /* PaymentSuccessViewController.xib in Resources */,
 				FA1613CD225EC12700F0B055 /* SearchHeaderTableViewCell.xib in Resources */,
 				FA934E2B225EA51200E3B202 /* Main.storyboard in Resources */,
 			);
@@ -525,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1613D3225ED60A00F0B055 /* CreditCardOnboardingViewController.swift in Sources */,
+				FAF1B06A226005DD007D9E53 /* PaymentSuccessViewController.swift in Sources */,
 				FA1613D9225EDCBE00F0B055 /* RHFloatingTextField.swift in Sources */,
 				FAF1B05E225FE656007D9E53 /* ConfirmationViewController.swift in Sources */,
 				FA49FED7225EB62D00693C08 /* User.swift in Sources */,
