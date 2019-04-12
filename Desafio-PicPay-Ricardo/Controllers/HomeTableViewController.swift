@@ -34,16 +34,16 @@ class HomeTableViewController: UITableViewController {
     var animationProgressWhenInterrupted: CGFloat = 0
     
     func setupCard(viewModel: PaymentFlowViewModel) {
+        guard let window = UIApplication.shared.keyWindow else { return }
         visualEffectView = UIVisualEffectView()
-        visualEffectView.frame = self.view.frame
-        self.view.addSubview(visualEffectView)
+        visualEffectView.frame = window.frame
+        window.addSubview(visualEffectView)
         
         cardViewController = PaymentSuccessViewController(nibName: "PaymentSuccessViewController", bundle: nil)
         cardViewController.viewModel = PaymentSuccessViewModel(viewModel: viewModel)
-        self.addChild(cardViewController)
-        self.view.addSubview(cardViewController.view)
+        window.addSubview(cardViewController.view)
         cardHeight = cardViewController.view.frame.height
-        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHeight, width: self.view.bounds.width, height: cardHeight)
+        cardViewController.view.frame = CGRect(x: 0, y: window.frame.height - cardHeight, width: window.bounds.width, height: cardHeight)
         
         cardViewController.view.clipsToBounds = true
         
@@ -51,7 +51,7 @@ class HomeTableViewController: UITableViewController {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleCardPan(recognizer:)))
         
         cardViewController.handleArea.addGestureRecognizer(tapGestureRecognizer)
-        cardViewController.handleArea.addGestureRecognizer(panGestureRecognizer)
+        cardViewController.view.addGestureRecognizer(panGestureRecognizer)
         animateTransitionIfNeeded(state: .expanded, duration: 0.9)
     }
     
@@ -81,15 +81,15 @@ class HomeTableViewController: UITableViewController {
     }
     
     func animateTransitionIfNeeded(state: CardState, duration: TimeInterval) {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        
         if runningAnimations.isEmpty {
             let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
                 switch state {
                 case .expanded:
-                    self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
-                    self.tableView.isScrollEnabled = false
+                    self.cardViewController.view.frame.origin.y = window.frame.height - self.cardHeight
                 case .collapsed:
-                    self.cardViewController.view.frame.origin.y = self.view.frame.height
-                    self.tableView.isScrollEnabled = true
+                    self.cardViewController.view.frame.origin.y = window.frame.height
                 }
             }
             
@@ -97,6 +97,7 @@ class HomeTableViewController: UITableViewController {
                 self.cardVisible = !self.cardVisible
                 self.runningAnimations.removeAll()
                 if state == .collapsed {
+                    self.visualEffectView.removeFromSuperview()
                     self.cardViewController.view.removeFromSuperview()
                 }
             }
@@ -119,8 +120,10 @@ class HomeTableViewController: UITableViewController {
             let blurAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
                 switch state {
                 case .expanded:
+                    self.visualEffectView.alpha = 0.9
                     self.visualEffectView.effect = UIBlurEffect(style: .dark)
                 case .collapsed:
+                    self.visualEffectView.alpha = 0.0
                     self.visualEffectView.effect = nil
                 }
             }
