@@ -21,6 +21,7 @@ class ConfirmationViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction private func changeCreditCard() {
+        self.view.resignFirstResponder()
         self.performSegue(withIdentifier: R.segue.confirmationViewController.goToEditCreditCard, sender: nil)
     }
     

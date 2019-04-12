@@ -22,7 +22,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="cCG-bt-mW3" kind="relationship" relationship="rootViewController" id="qaK-vE-oVE"/>
+                        <segue destination="IsW-UM-P7F" kind="relationship" relationship="rootViewController" id="eJN-KC-Ygp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="un6-F0-y2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -30,32 +30,93 @@
             <point key="canvasLocation" x="-63.200000000000003" y="-585.1574212893554"/>
         </scene>
         <!--Contatos-->
-        <scene sceneID="ih6-GG-WAh">
+        <scene sceneID="sdS-xP-OIf">
             <objects>
-                <tableViewController id="cCG-bt-mW3" customClass="HomeTableViewController" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z95-pr-GR7">
+                <viewController id="IsW-UM-P7F" customClass="HomeTableViewController" customModule="RPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6dx-Vi-JpW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-aq-5PT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="A quem você deseja pagar?" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Db-3o-rfw" customClass="RHTextField" customModule="RPay" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="6" width="343" height="40"/>
+                                        <color key="backgroundColor" red="0.16862745098039217" green="0.17254901960784313" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="icon_magnifier"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="26"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.16862745100000001" green="0.17254901959999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasBorder" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="changeLeftPadding" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="editingBegin" destination="IsW-UM-P7F" eventType="editingDidBegin" id="vsK-Rm-MPA"/>
+                                            <action selector="editingChanged" destination="IsW-UM-P7F" eventType="editingChanged" id="3rD-6u-M1r"/>
+                                            <action selector="editingEnd" destination="IsW-UM-P7F" eventType="editingDidEnd" id="BHs-rq-kdc"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4Db-3o-rfw" firstAttribute="top" secondItem="8gv-aq-5PT" secondAttribute="top" constant="6" id="Hw2-d7-3Dg"/>
+                                    <constraint firstItem="4Db-3o-rfw" firstAttribute="leading" secondItem="8gv-aq-5PT" secondAttribute="leading" constant="16" id="KoI-vK-UU3"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Db-3o-rfw" secondAttribute="bottom" constant="6" id="XDM-YP-vAd"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Db-3o-rfw" secondAttribute="trailing" constant="16" id="h9p-LF-T5I"/>
+                                    <constraint firstAttribute="height" constant="52" id="kFD-6B-YAH"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-OB-1ds">
+                                <rect key="frame" x="0.0" y="52" width="375" height="551"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="IsW-UM-P7F" id="N8d-yZ-FKy"/>
+                                    <outlet property="delegate" destination="IsW-UM-P7F" id="TI9-5j-8pT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <connections>
-                            <outlet property="dataSource" destination="cCG-bt-mW3" id="NT0-m3-eZ9"/>
-                            <outlet property="delegate" destination="cCG-bt-mW3" id="R1f-EX-taC"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Contatos" id="EcR-Tq-DBz"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5dB-OB-1ds" secondAttribute="trailing" id="0qi-7R-t14"/>
+                            <constraint firstAttribute="bottom" secondItem="5dB-OB-1ds" secondAttribute="bottom" id="CrZ-5h-lWi"/>
+                            <constraint firstItem="5dB-OB-1ds" firstAttribute="leading" secondItem="6dx-Vi-JpW" secondAttribute="leading" id="MV9-ew-m5v"/>
+                            <constraint firstItem="8gv-aq-5PT" firstAttribute="leading" secondItem="Hkv-Qg-wBs" secondAttribute="leading" id="c4r-Lz-4O8"/>
+                            <constraint firstItem="8gv-aq-5PT" firstAttribute="trailing" secondItem="Hkv-Qg-wBs" secondAttribute="trailing" id="cZR-Kg-YTO"/>
+                            <constraint firstItem="8gv-aq-5PT" firstAttribute="top" secondItem="Hkv-Qg-wBs" secondAttribute="top" id="ljT-9X-GYG"/>
+                            <constraint firstItem="5dB-OB-1ds" firstAttribute="top" secondItem="8gv-aq-5PT" secondAttribute="bottom" id="uvA-ZB-0v0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hkv-Qg-wBs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contatos" id="BL0-Ue-IQf"/>
                     <connections>
-                        <segue destination="2SV-4z-O2L" kind="show" identifier="goToCreditCardOnboarding" id="x9c-HA-448"/>
-                        <segue destination="EP2-Dp-sNL" kind="show" identifier="goToConfirmation" id="0ch-Ui-1Qr"/>
+                        <outlet property="searchTextField" destination="4Db-3o-rfw" id="qgi-C9-8R8"/>
+                        <outlet property="tableView" destination="5dB-OB-1ds" id="NaA-Wd-eJb"/>
+                        <segue destination="2SV-4z-O2L" kind="show" identifier="goToCreditCardOnboarding" id="5Gu-Z2-5ir"/>
+                        <segue destination="EP2-Dp-sNL" kind="show" identifier="goToConfirmation" id="rpV-cv-UuN"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3h-Aw-ozL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJu-7E-9ki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="-583"/>
+            <point key="canvasLocation" x="690" y="-585"/>
         </scene>
         <!--Credit Card Onboarding View Controller-->
         <scene sceneID="e6Z-RT-cQr">
             <objects>
-                <viewController id="2SV-4z-O2L" customClass="CreditCardOnboardingViewController" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2SV-4z-O2L" customClass="CreditCardOnboardingViewController" customModule="RPay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="loQ-VT-oxy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +140,7 @@
                                     <constraint firstAttribute="height" constant="100" id="gTn-zX-j9L"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nX-Z3-vy1" customClass="RHButton" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nX-Z3-vy1" customClass="RHButton" customModule="RPay" customModuleProvider="target">
                                 <rect key="frame" x="12" y="543" width="351" height="48"/>
                                 <color key="backgroundColor" red="0.066666666666666666" green="0.7803921568627451" blue="0.43529411764705883" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -126,7 +187,7 @@
         <!--New Credit Card View Controller-->
         <scene sceneID="hqY-8I-XNq">
             <objects>
-                <tableViewController id="HO6-or-GAc" customClass="NewCreditCardViewController" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="HO6-or-GAc" customClass="NewCreditCardViewController" customModule="RPay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fJw-Al-AIu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,7 +225,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGa-ff-RYb" customClass="RHFloatingTextField" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGa-ff-RYb" customClass="RHFloatingTextField" customModule="RPay" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="16" width="335" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="F6N-AI-UPZ"/>
@@ -200,7 +261,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do titular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pdI-08-gDC" customClass="RHFloatingTextField" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do titular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pdI-08-gDC" customClass="RHFloatingTextField" customModule="RPay" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="16" width="335" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="7Iy-Ic-Q7Q"/>
@@ -239,7 +300,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5M9-ge-ZSP">
                                                     <rect key="frame" x="20" y="16" width="335" height="30"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Vencimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8v-qz-mNx" customClass="RHFloatingTextField" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Vencimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8v-qz-mNx" customClass="RHFloatingTextField" customModule="RPay" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="161.5" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="fHB-Tb-81e"/>
@@ -259,7 +320,7 @@
                                                                 <action selector="editingChanged:" destination="HO6-or-GAc" eventType="editingChanged" id="Aht-Md-G5K"/>
                                                             </connections>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O5l-Mb-1u5" customClass="RHFloatingTextField" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O5l-Mb-1u5" customClass="RHFloatingTextField" customModule="RPay" customModuleProvider="target">
                                                             <rect key="frame" x="173.5" y="0.0" width="161.5" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="nQa-7f-1he"/>
@@ -316,7 +377,7 @@
         <!--Confirmation View Controller-->
         <scene sceneID="wHx-om-8p4">
             <objects>
-                <viewController id="EP2-Dp-sNL" customClass="ConfirmationViewController" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EP2-Dp-sNL" customClass="ConfirmationViewController" customModule="RPay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bBF-Rz-VhU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -366,7 +427,7 @@
                                     <action selector="changeCreditCard" destination="EP2-Dp-sNL" eventType="touchUpInside" id="DQQ-lo-drd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hP-Pz-Yy7" customClass="RHButton" customModule="Desafio_PicPay_Ricardo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hP-Pz-Yy7" customClass="RHButton" customModule="RPay" customModuleProvider="target">
                                 <rect key="frame" x="12" y="280" width="351" height="48"/>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -431,10 +492,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_magnifier" width="16" height="16"/>
         <image name="ilustration_creditcard" width="150" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0ch-Ui-1Qr"/>
-        <segue reference="YyR-Fv-T8u"/>
+        <segue reference="rpV-cv-UuN"/>
+        <segue reference="DZH-rI-6A5"/>
     </inferredMetricsTieBreakers>
 </document>

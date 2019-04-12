@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		0717B74134272E2A8F299B19 /* Pods_Desafio_PicPay_Ricardo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE26AF9B7CB48CF6AA6B779 /* Pods_Desafio_PicPay_Ricardo.framework */; };
 		5FB7BC2CA9B4C0EC1502A93F /* Pods_Desafio_PicPay_RicardoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB227B35E6A527EEB8150FD /* Pods_Desafio_PicPay_RicardoTests.framework */; };
+		FA083CB6226038FB00DC0295 /* RHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA083CB5226038FB00DC0295 /* RHTextField.swift */; };
 		FA1613C5225EB8A100F0B055 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613C4225EB8A100F0B055 /* HomeTableViewController.swift */; };
 		FA1613C8225EBB5E00F0B055 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613C6225EBB5E00F0B055 /* UserTableViewCell.swift */; };
 		FA1613C9225EBB5E00F0B055 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1613C7225EBB5E00F0B055 /* UserTableViewCell.xib */; };
-		FA1613CC225EC12700F0B055 /* SearchHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613CA225EC12700F0B055 /* SearchHeaderTableViewCell.swift */; };
-		FA1613CD225EC12700F0B055 /* SearchHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1613CB225EC12700F0B055 /* SearchHeaderTableViewCell.xib */; };
 		FA1613D1225ED53500F0B055 /* RHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D0225ED53500F0B055 /* RHButton.swift */; };
 		FA1613D3225ED60A00F0B055 /* CreditCardOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D2225ED60A00F0B055 /* CreditCardOnboardingViewController.swift */; };
 		FA1613D5225ED7BE00F0B055 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1613D4225ED7BE00F0B055 /* AppColors.swift */; };
@@ -71,11 +70,10 @@
 		A6B034967242A0158E59B79E /* Pods-Desafio-PicPay-Ricardo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio-PicPay-Ricardo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio-PicPay-Ricardo/Pods-Desafio-PicPay-Ricardo.release.xcconfig"; sourceTree = "<group>"; };
 		B75C8CF82AF9076033603124 /* Pods-Desafio-PicPay-RicardoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio-PicPay-RicardoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio-PicPay-RicardoTests/Pods-Desafio-PicPay-RicardoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4915BEFDE0235BD12117B51 /* Pods-Desafio-PicPay-RicardoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio-PicPay-RicardoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio-PicPay-RicardoTests/Pods-Desafio-PicPay-RicardoTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA083CB5226038FB00DC0295 /* RHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHTextField.swift; sourceTree = "<group>"; };
 		FA1613C4225EB8A100F0B055 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		FA1613C6225EBB5E00F0B055 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		FA1613C7225EBB5E00F0B055 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
-		FA1613CA225EC12700F0B055 /* SearchHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		FA1613CB225EC12700F0B055 /* SearchHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		FA1613D0225ED53500F0B055 /* RHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHButton.swift; sourceTree = "<group>"; };
 		FA1613D2225ED60A00F0B055 /* CreditCardOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardOnboardingViewController.swift; sourceTree = "<group>"; };
 		FA1613D4225ED7BE00F0B055 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
@@ -217,8 +215,6 @@
 			children = (
 				FA1613C6225EBB5E00F0B055 /* UserTableViewCell.swift */,
 				FA1613C7225EBB5E00F0B055 /* UserTableViewCell.xib */,
-				FA1613CA225EC12700F0B055 /* SearchHeaderTableViewCell.swift */,
-				FA1613CB225EC12700F0B055 /* SearchHeaderTableViewCell.xib */,
 				FA1613DE225EECC400F0B055 /* PayFooterTableViewCell.swift */,
 				FA1613DF225EECC400F0B055 /* PayFooterTableViewCell.xib */,
 				FAF1B068226005DD007D9E53 /* PaymentSuccessViewController.swift */,
@@ -315,6 +311,7 @@
 				FA1613D0225ED53500F0B055 /* RHButton.swift */,
 				FA1613D8225EDCBE00F0B055 /* RHFloatingTextField.swift */,
 				FA49FEC9225EAC0B00693C08 /* CustomActivityIndicator.swift */,
+				FA083CB5226038FB00DC0295 /* RHTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -410,7 +407,6 @@
 				FA934E33225EA51300E3B202 /* LaunchScreen.storyboard in Resources */,
 				FA934E30225EA51300E3B202 /* Assets.xcassets in Resources */,
 				FAF1B06B226005DD007D9E53 /* PaymentSuccessViewController.xib in Resources */,
-				FA1613CD225EC12700F0B055 /* SearchHeaderTableViewCell.xib in Resources */,
 				FA934E2B225EA51200E3B202 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +553,7 @@
 				FA1613C8225EBB5E00F0B055 /* UserTableViewCell.swift in Sources */,
 				FA934E2E225EA51200E3B202 /* Desafio_PicPay_Ricardo.xcdatamodeld in Sources */,
 				FADE6183225F91FD00BAE7B1 /* PaymentFlowViewModel.swift in Sources */,
+				FA083CB6226038FB00DC0295 /* RHTextField.swift in Sources */,
 				FA1613D5225ED7BE00F0B055 /* AppColors.swift in Sources */,
 				FAF1B063225FED10007D9E53 /* MoviePersistenceManager.swift in Sources */,
 				FA49FECE225EAC4A00693C08 /* UIViewController+Extensions.swift in Sources */,
@@ -569,7 +566,6 @@
 				FA49FEDA225EB65000693C08 /* HomeViewModel.swift in Sources */,
 				FA1613D7225EDAC400F0B055 /* NewCreditCardViewController.swift in Sources */,
 				FA934E26225EA51200E3B202 /* AppDelegate.swift in Sources */,
-				FA1613CC225EC12700F0B055 /* SearchHeaderTableViewCell.swift in Sources */,
 				FA1613DD225EE74100F0B055 /* String+Extensions.swift in Sources */,
 				FAF1B06D22601E97007D9E53 /* PaymentSuccessViewModel.swift in Sources */,
 				FA49FEC1225EAAF800693C08 /* R.generated.swift in Sources */,

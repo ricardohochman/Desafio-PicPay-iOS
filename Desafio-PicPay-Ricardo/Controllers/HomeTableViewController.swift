@@ -8,7 +8,10 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchTextField: RHTextField!
     
     // MARK: - Constants
     let viewModel = HomeViewModel()
@@ -177,6 +180,22 @@ class HomeTableViewController: UITableViewController {
         tableView.rowHeight = 80
     }
     
+    var lastVelocityYSign = 0
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentVelocityY = scrollView.panGestureRecognizer.velocity(in: scrollView.superview).y
+        let currentVelocityYSign = Int(currentVelocityY).signum()
+        if currentVelocityYSign != lastVelocityYSign &&
+            currentVelocityYSign != 0 {
+            lastVelocityYSign = currentVelocityYSign
+        }
+        if lastVelocityYSign < 0 {
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+        } else if lastVelocityYSign > 0 {
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+    }
+
     private func observeNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(showPaymentSuccess), name: .paymentSuccess, object: nil)
     }
@@ -209,28 +228,18 @@ class HomeTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRows()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = R.nib.userTableViewCell(owner: nil) else { return UITableViewCell() }
         let userVM = viewModel.user(at: indexPath.row)
         cell.setup(viewModel: userVM)
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = R.nib.searchHeaderTableViewCell(owner: nil) else { return nil }
-        header.setup(text: viewModel.getSearchText(), delegate: self)
-        return header
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let userVM = viewModel.user(at: indexPath.row)
         viewModel.paymentViewModel.setUser(user: userVM.user)
@@ -251,11 +260,19 @@ class HomeTableViewController: UITableViewController {
             
         }
     }
-}
-
-extension HomeTableViewController: SearchHeaderDelegate {
-    func textDidChange(_ text: String) {
-        viewModel.filterUsers(text: text)
+    
+    @IBAction func editingChanged() {
+        viewModel.filterUsers(text: searchTextField.text ?? "")
         tableView.reloadData()
+    }
+    
+    @IBAction func editingBegin() {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        searchTextField.borderColor = AppColors.white
+    }
+    
+    @IBAction func editingEnd() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        searchTextField.borderColor = AppColors.dark
     }
 }
