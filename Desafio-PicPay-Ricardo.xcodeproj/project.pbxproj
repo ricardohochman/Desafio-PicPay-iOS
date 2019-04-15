@@ -372,9 +372,11 @@
 				TargetAttributes = {
 					FA934E21225EA51200E3B202 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					FA934E38225EA51300E3B202 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = FA934E21225EA51200E3B202;
 					};
 				};
@@ -769,7 +771,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardohochman.Desafio-PicPay-Ricardo";
 				PRODUCT_NAME = RPay;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -788,7 +790,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardohochman.Desafio-PicPay-Ricardo";
 				PRODUCT_NAME = RPay;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -809,7 +811,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardohochman.Desafio-PicPay-RicardoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPay.app/RPay";
 			};
@@ -831,7 +833,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ricardohochman.Desafio-PicPay-RicardoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPay.app/RPay";
 			};
